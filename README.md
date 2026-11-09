@@ -1,53 +1,62 @@
-# Sandali Uthpala - Portfolio Website
+# Sandali Uthpala — Portfolio
 
-A responsive, static portfolio website built with HTML, CSS and JavaScript. It can be hosted free using GitHub Pages.
+A responsive personal portfolio for **Sandali Uthpala**, a Computer Engineering undergraduate at the University of Peradeniya. The site introduces her background and skills, highlights selected projects and experience, and provides contact links.
 
-## 1. Before publishing
+**Built with:** HTML, CSS, and vanilla JavaScript. No build step or package installation is required.
 
-Open `index.html` and review these links before publishing:
+## Features
 
-- Replace the LinkedIn homepage link with your actual LinkedIn profile.
-- Replace each “Find on GitHub” search link with its project repository URL when available.
-- Confirm the email address and project descriptions are suitable to publish.
-- Add your own profile photo if you want one. The current hero card uses an initials-based visual.
+- Responsive single-page portfolio with About, Skills, Projects, Experience, Achievements, and Contact sections
+- Individual detail pages for selected projects
+- Mobile navigation and an automatically updated copyright year
+- Project illustrations, showcase images, organization logos, and demonstration videos
+- Ready to publish as a static website with GitHub Pages
 
-Review all project descriptions and technologies to ensure they accurately reflect your contributions. Only publish code and project details you are allowed to share.
+## Projects
 
-Each project card links to its own page in `projects/`. The cards use custom, text-free SVG illustrations from `images/`; the RoadEye, PeraVerse, and Human–Elephant project pages also show their corresponding `*_2` showcase images. The Line Following Robot and Rock Paper Scissors Lizard Spock pages include their demonstration videos from `videos/`; organization artwork is stored in `logos/`.
+- **RoadEye — Smart Riding Assistant:** A connected helmet concept for hands-free navigation and riding alerts.
+- **PeraVerse Smart Info Kiosk:** A university information kiosk project showcased at EngEX 2025.
+- **MRI Motion Artifact Reduction:** Research into GAN-based reduction of motion artifacts in abdominal MRI.
+- **Progressive Cyber Defense:** Research into practical defense decisions for university networks.
+- **Human–Elephant Conflict Mitigation:** An eco-guard concept combining acoustic sensing and AI-powered visual detection.
+- **Line Following Robot:** A sensor-based robotics mini project.
+- **Rock Paper Scissors Lizard Spock:** A five-choice game implementation.
 
-## 2. Create the GitHub repository
+Project summaries and links are available on the site; use each project's detail page for additional context.
 
-1. Sign in to GitHub.
-2. Create a new public repository named exactly `YOUR_GITHUB_USERNAME.github.io` for a user-site URL.
-3. Extract this project ZIP on your computer.
-4. Upload `index.html`, `styles.css`, `script.js`, `README.md`, and the `projects/`, `images/`, `videos/`, and `logos/` folders to the repository root, preserving the folder structure.
-5. Commit the files.
+## Run locally
 
-Your website address will be:
+1. Clone or download this repository.
+2. Open `index.html` in a browser.
 
-`https://YOUR_GITHUB_USERNAME.github.io/`
+Alternatively, serve the repository root with a local static web server (for example, the **Live Server** extension in VS Code). Keeping the site on a local server is useful for checking page navigation and media paths.
 
-## 3. Enable GitHub Pages
+## Publish with GitHub Pages
 
-For a user-site repository named `YOUR_GITHUB_USERNAME.github.io`, GitHub Pages usually publishes from the `main` branch root automatically. If needed:
+1. Push the repository to GitHub.
+2. In the repository, open **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select the branch you want to publish (usually `main`) and the `/ (root)` folder, then save.
+5. Once deployment completes, open the URL shown in the Pages settings.
 
-1. Open the repository's **Settings**.
-2. Select **Pages** in the left sidebar.
-3. Under **Build and deployment**, select **Deploy from a branch**.
-4. Select branch `main` and folder `/ (root)`.
-5. Save and wait for deployment.
+For a GitHub user site, name the repository `<your-username>.github.io`; its URL will be `https://<your-username>.github.io/`. A regular project repository is typically published at `https://<your-username>.github.io/<repository-name>/`.
 
-For a normal project repository instead, the URL is generally:
-`https://YOUR_GITHUB_USERNAME.github.io/REPOSITORY_NAME/`
+## Project structure
 
-## 4. Update the site
+```text
+.
+├── index.html       # Main portfolio page
+├── styles.css       # Layout, responsive styling, and visual design
+├── script.js        # Mobile navigation and current-year display
+├── projects/        # Individual project detail pages
+├── images/          # Project illustrations and showcase images
+├── videos/          # Project demonstration videos
+└── logos/           # Organization and experience logos
+```
 
-Edit the files locally, then push/commit the changes to GitHub. GitHub Pages will publish the updated version after the deployment finishes.
+## Updating the portfolio
 
-## Files
-
-- `index.html` — page content and sections
-- `styles.css` — layout, colours, responsive design and visual styling
-- `script.js` — mobile navigation and current year
-- `projects/` — individual project detail pages
-- `images/`, `videos/`, and `logos/` — project and experience media
+- Edit `index.html` to update profile information, skills, projects, experience, achievements, and contact links.
+- Add or update project pages in `projects/`, and keep referenced media in the appropriate asset folder.
+- Update `styles.css` for appearance and responsive behavior; update `script.js` for site interactions.
+- Before publishing, verify that social profile links, project repository links, contact information, descriptions, and media are accurate and appropriate to share.
