@@ -13,7 +13,7 @@ Open `index.html` and review these links before publishing:
 
 Review all project descriptions and technologies to ensure they accurately reflect your contributions. Only publish code and project details you are allowed to share.
 
-Each project card links to its own page in `projects/`. The Line Following Robot and Rock Paper Scissors Lizard Spock pages include their demonstration videos from `videos/`; project and organization artwork is stored in `images/` and `logos/`.
+Each project card links to its own page in `projects/`. The cards use custom, text-free SVG illustrations from `images/`; the RoadEye, PeraVerse, and Human–Elephant project pages also show their corresponding `*_2` showcase images. The Line Following Robot and Rock Paper Scissors Lizard Spock pages include their demonstration videos from `videos/`; organization artwork is stored in `logos/`.
 
 ## 2. Create the GitHub repository
 
