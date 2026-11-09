@@ -1,4 +1,4 @@
-# Sandali Uthpala — Portfolio Website
+# Sandali Uthpala - Portfolio Website
 
 A responsive, static portfolio website built with HTML, CSS and JavaScript. It can be hosted free using GitHub Pages.
 
