@@ -1,0 +1,151 @@
+# Human-Elephant Conflict Mitigation – Smart Eco-Guard System
+
+**SLT Technnovation Challenge 2025 – Top 8 Finalists**  
+**Team EurekaWave | University of Peradeniya**
+
+## 01. Project Overview
+
+Human-elephant conflict is a growing environmental and social challenge in Sri Lanka, particularly affecting rural communities living near forest boundaries. Elephants entering residential and agricultural areas pose significant threats to human lives, property, and livelihoods, while retaliatory actions also endanger wildlife.
+
+As part of Team EurekaWave, we developed a concept for an intelligent, environmentally friendly early-warning and elephant deterrence system designed to minimize human-elephant encounters and promote safer coexistence between humans and wildlife.
+
+Our project was selected among the **Top 8 Finalists of the SLT Technnovation Challenge 2025**, an islandwide innovation competition organized by Sri Lanka Telecom (SLT).
+
+## 02. Problem Definition
+
+Traditional elephant-deterrence methods often rely on manual monitoring and reactive responses, which can be ineffective in remote areas and during nighttime.
+
+The key challenges addressed by our project include:
+
+- Delayed detection of elephants approaching human settlements.
+- Limited monitoring capabilities in remote and low-visibility environments.
+- Risks associated with traditional elephant-deterrence methods.
+- Lack of timely communication between monitoring systems, villagers, and wildlife authorities.
+- Limited access to reliable electricity and internet connectivity in rural locations.
+
+## 03. Project Objectives
+
+The main objective was to design a smart, sustainable, and non-harmful system capable of detecting elephant activity and providing timely warnings to nearby communities.
+
+Specific objectives included:
+
+- Detecting elephant presence through acoustic and visual sensing.
+- Applying AI-based image processing for reliable elephant identification.
+- Developing non-harmful deterrence mechanisms.
+- Providing real-time alerts to nearby villagers and wildlife authorities.
+- Enabling autonomous operation using renewable solar energy.
+- Reducing dependence on continuous internet connectivity through edge computing.
+
+## 04. Proposed System
+
+We proposed a Smart Eco-Guard System integrating multiple technologies into a unified monitoring and deterrence solution.
+
+### Key System Components
+
+**Acoustic Detection**
+- Directional, high-sensitivity microphones detect elephant vocalizations, including low-frequency rumbles and trumpeting.
+- Acoustic monitoring provides an additional detection mechanism, particularly when visual identification is difficult.
+
+**AI-Powered Visual Detection**
+- Infrared CCTV cameras and motion sensors monitor surrounding areas.
+- A custom-trained YOLO (You Only Look Once) model identifies elephants from camera footage.
+- Supports detection under nighttime and low-visibility conditions.
+
+**Non-Harmful Deterrence**
+- Bee sound emitters and floodlights are activated when elephant activity is detected.
+- These mechanisms are intended to discourage elephants from approaching nearby human settlements without causing physical harm.
+
+**Solar-Powered Operation**
+- Solar panels provide renewable energy for system operation.
+- Supports deployment in remote locations without conventional electricity infrastructure.
+
+**Real-Time Alert System**
+- Wi-Fi-enabled communication provides notifications to nearby villagers and relevant wildlife authorities.
+- Enables faster awareness and coordinated responses.
+
+**Edge Computing**
+- Local processing enables AI-based image analysis without depending entirely on cloud infrastructure.
+- Reduces communication delays and supports operation in areas with limited internet connectivity.
+
+## 05. System Architecture
+
+The proposed system follows an integrated detection, decision-making, and response architecture.
+
+1. **Sensing Layer:** Microphones, infrared cameras, and motion sensors collect environmental information.
+2. **Processing Layer:** Edge computing processes sensor information and performs AI-based elephant detection.
+3. **Decision Layer:** The system evaluates detected elephant activity and determines the appropriate response.
+4. **Deterrence Layer:** Bee sound emitters and floodlights are activated when required.
+5. **Communication Layer:** Wireless notifications are sent to nearby villagers and relevant authorities.
+6. **Power Layer:** Solar energy supports autonomous operation.
+
+## 06. Technologies & Tools
+
+- **Python:** AI development and image-processing implementation.
+- **YOLO:** Object detection and elephant identification.
+- **Computer Vision:** Visual monitoring and image analysis.
+- **Machine Learning:** Intelligent detection and classification.
+- **Embedded Systems:** Sensor integration and automated system control.
+- **IoT:** Wireless communication and real-time notifications.
+- **Edge Computing:** Local processing and reduced network dependency.
+- **Solar Energy:** Sustainable power generation.
+
+## 07. Engineering & Development Approach
+
+The project involved exploring how multiple engineering disciplines could be integrated into a practical environmental protection solution.
+
+Our approach focused on:
+
+- Identifying the technical challenges associated with human-elephant conflict.
+- Exploring suitable sensing and detection technologies.
+- Designing an integrated hardware and software architecture.
+- Investigating AI-based elephant detection.
+- Considering sustainable power solutions for remote deployment.
+- Designing non-harmful deterrence and communication mechanisms.
+
+## 08. Expected Impact
+
+The proposed Smart Eco-Guard System aims to contribute to:
+
+- Improved early detection of elephants near human settlements.
+- Reduced risks to human lives, agricultural lands, and property.
+- More effective and environmentally responsible elephant deterrence.
+- Better communication between rural communities and wildlife authorities.
+- Sustainable wildlife protection through technology-driven solutions.
+
+## 09. Achievement & Recognition
+
+**Top 8 Finalists – SLT Technnovation Challenge 2025**
+
+Being selected among the Top 8 finalists was an important milestone for Team EurekaWave and an opportunity to present our engineering solution on a national innovation platform.
+
+The experience strengthened our ability to approach real-world challenges through interdisciplinary engineering, innovation, teamwork, and design thinking.
+
+## 10. Skills Demonstrated
+
+- Product Development
+- Python Programming
+- Artificial Intelligence (AI)
+- Machine Learning (ML)
+- Computer Vision
+- Embedded Systems
+- Internet of Things (IoT)
+- Edge Computing
+- System Architecture
+- Product Design
+- Design Thinking
+- Creative Problem Solving
+- Project Planning
+- Team Collaboration
+
+## 11. Project Gallery
+
+Include photographs from:
+- Project development and prototype design.
+- Team EurekaWave.
+- SLT Technnovation Challenge 2025.
+- Finalist presentations and demonstrations.
+
+**Team:** EurekaWave  
+**Institution:** University of Peradeniya  
+**Competition:** SLT Technnovation Challenge 2025  
+**Achievement:** Top 8 Finalists

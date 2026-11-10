@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SolarSense, a portable IoT and AI-powered solar site assessment project."
+    />
+    <title>SolarSense — Sandali Uthpala</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav detail-container" aria-label="Main navigation">
+        <a class="brand" href="../index.html">SU<span>.</span></a>
+        <a class="detail-back" href="../index.html#projects">← Back to projects</a>
+      </nav>
+    </header>
+    <main class="project-detail">
+      <article class="detail-container">
+        <div class="detail-heading">
+          <p class="eyebrow">TEAM EUREKAWAVE · PITCH ARENA 2025</p>
+          <h1>SolarSense</h1>
+          <p class="detail-summary">
+            A portable, low-cost solar assessment concept that combines local
+            environmental sensing, IoT, and machine learning to estimate solar
+            generation and site feasibility.
+          </p>
+          <div class="tag-list detail-tags">
+            <span>ESP32</span><span>IoT</span><span>Machine Learning</span>
+            <span>Renewable Energy</span><span>Cloud Dashboard</span>
+          </div>
+        </div>
+        <img
+          class="detail-media"
+          src="../images/SolarSense.png"
+          alt="SolarSense AI-powered solar site assessment project"
+        />
+        <section class="detail-panel">
+          <h2>Project overview</h2>
+          <p>
+            SolarSense explores a portable Solar Assessment Node for collecting
+            location-specific environmental measurements and estimating solar
+            energy potential. It was developed by Team EurekaWave at the
+            University of Peradeniya and selected for the Pitch Arena 2025
+            semi-finals, among the top 45 teams from more than 120 participants.
+          </p>
+        </section>
+        <section class="detail-panel">
+          <h2>Problem and proposed solution</h2>
+          <p>
+            Assessments based only on historical or satellite data may miss
+            local microclimate differences, while dedicated measurement
+            equipment can be costly. The proposed system combines on-site
+            measurements with historical NASA POWER solar and weather data to
+            estimate generation and help assess the feasibility of a solar
+            installation.
+          </p>
+        </section>
+        <section class="detail-panel">
+          <h2>System architecture</h2>
+          <p>
+            A multi-directional LDR array measures solar irradiance, a DHT22
+            captures temperature and humidity, and a NEO-6M GPS module provides
+            location data. An ESP32 collects sensor readings and transmits them
+            over Wi-Fi to a cloud database. LightGBM and artificial neural
+            network models combine local measurements with historical data; a
+            web dashboard presents readings, maps, energy estimates, and
+            financial feasibility indicators.
+          </p>
+        </section>
+        <section class="detail-panel">
+          <h2>Prototype notes</h2>
+          <p>
+            The project notes report a prototype measurement error below 8%,
+            with a model trained on 34 years of NASA POWER data and reported
+            metrics of RMSE 41.5 W/m² and MAPE 8.4%. These are figures from the
+            supplied project materials.
+          </p>
+          <p>
+            The concept also considers return-on-investment and payback
+            estimates, a portable power-bank-operated device, and a low-cost
+            prototype with an estimated hardware cost of approximately LKR
+            11,500.
+          </p>
+        </section>
+        <section class="detail-panel">
+          <h2>Future directions</h2>
+          <p>
+            Potential extensions described in the project notes include
+            expanding a distributed irradiance dataset, adding satellite-based
+            shading analysis, calibrating predictions with solar panel output,
+            supporting LoRaWAN in remote locations, and developing a mobile
+            application for field engineers.
+          </p>
+        </section>
+        <section class="detail-panel">
+          <h2>Project presentation</h2>
+          <a
+            class="document-link"
+            href="../images/Solar%20Sense/SOLARSENSE_Presentation.pdf"
+            target="_blank"
+            rel="noreferrer"
+            >SolarSense presentation (PDF) ↗</a
+          >
+        </section>
+        <div class="detail-footer">
+          <a href="../index.html#projects">All projects →</a>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

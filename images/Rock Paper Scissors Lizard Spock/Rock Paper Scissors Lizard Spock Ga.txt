@@ -1,0 +1,19 @@
+"Rock Paper Scissors Lizard Spock" Game - Mini Project
+
+Developed an interactive hardware–software game system as a first-year second-semester group project for GP 106 – Computing at the Faculty of Engineering, University of Peradeniya. The project is an enhanced version of the classic Rock Paper Scissors game, extended to include Lizard and Spock, inspired by The Big Bang Theory, increasing game complexity and engagement.
+
+The system was built using an Arduino microcontroller, integrating five pushbuttons for user choices, an on/off control button, ten LEDs for real-time game feedback, and a buzzer for sound alerts and winner indications. Computer choices and both user and computer scores were displayed using binary LED representations, improving clarity while reinforcing digital logic concepts.
+
+To enhance development efficiency, the Arduino was programmed using Python with PyFirmata, allowing flexible control and rapid iteration. Different coding strategies for button handling, timing constraints, and buzzer melodies were explored. Beyond hardware implementation, a graphical user interface (GUI) was developed using Kivy, providing a user-friendly software interface to interact with the game.
+
+This project provided valuable hands-on experience in microcontrollers, embedded systems, hardware-software integration, Python programming, and real-world circuit implementation, bridging theoretical knowledge with practical engineering skills.
+
+Skills Demonstrated:
+MicrocontrollerProgramming
+EmbeddedSystem
+ 
+Python(ProgrammingLanguage)
+ 
+Hardware
+ 
+CircuitImplementation

@@ -1,0 +1,145 @@
+SolarSense - AI Powered Solar Site Assessment & Predictive Energy System
+Team EurekaWave | Pitch Arena 2025 | University of Peradeniya
+
+SolarSense is a portable, low-cost, AI-powered solar assessment system designed to make solar energy investments smarter, more accessible, and data-driven. The project addresses the lack of affordable, accurate, location-specific solar assessment tools in Sri Lanka by combining real-time environmental sensing, IoT technology, and machine learning to evaluate solar energy potential and investment feasibility.
+
+ 
+
+The Problem
+Traditional solar assessment methods often rely on historical satellite data, software simulations, or expensive measurement equipment. These approaches may overlook local microclimatic variations, leading to inaccurate energy predictions, inefficient system sizing, and uncertain investment decisions. SolarSense aims to bridge this gap through affordable, on-site environmental measurements combined with AI-driven predictions.
+
+ 
+
+Our Solution
+We developed a portable Solar Assessment Node that collects real-time environmental data and uses AI/ML models to predict solar energy generation and financial feasibility at a given location.
+
+ 
+
+Key Features & Technical Implementation
+
+1. IoT-Based Environmental Monitoring
+
+ESP32 microcontroller for sensor integration and data processing.
+
+Multi-directional LDR array for solar irradiance measurement.
+
+DHT22 sensor for temperature and humidity monitoring.
+
+NEO-6M GPS module for location-based data collection.
+
+Wi-Fi connectivity for transmitting sensor readings to a cloud database.
+
+2. AI/ML-Based Solar Prediction
+
+Machine learning models, including LightGBM and Artificial Neural Networks (ANN).
+
+Integration of historical NASA POWER solar and weather datasets with locally collected sensor readings.
+
+Prediction of daily, monthly, and annual solar energy generation.
+
+Estimation of solar investment profitability and site feasibility.
+
+3. Solar Feasibility & Financial Analysis
+
+Predicted photovoltaic (PV) energy output.
+
+Return on Investment (ROI) estimation.
+
+Investment payback period calculation.
+
+Location-based solar feasibility assessment.
+
+4. Cloud-Based Monitoring Dashboard
+
+Live environmental sensor readings.
+
+Interactive maps displaying geo-tagged measurement locations.
+
+Historical data visualization and performance graphs.
+
+Solar energy predictions and investment analysis.
+
+ 
+System Architecture
+The system follows an integrated IoT-to-AI architecture:
+
+Environmental Sensors → ESP32 → Wi-Fi → Cloud Database → AI/ML Prediction Engine → Web Dashboard
+
+The dashboard presents actionable insights, including predicted energy generation, ROI, payback period, and site feasibility.
+
+ 
+Innovation & Uniqueness
+SolarSense combines several capabilities into a single affordable and portable solution:
+
+Real-time, on-site environmental measurements.
+
+Hybrid prediction using local sensor data and historical satellite datasets.
+
+Geo-tagged solar irradiance data collection.
+
+AI-powered energy generation and profitability predictions.
+
+Portable, power-bank-operated hardware.
+
+Low-cost prototype with an estimated hardware cost of approximately LKR 11,500.
+
+Potential for expansion into a distributed, national-level solar assessment network.
+
+ 
+Prototype & Performance
+The prototype integrates the ESP32, environmental sensors, GPS module, and cloud-based analytics platform.
+
+The presented prototype performance included:
+
+Measurement error of less than 8% in testing.
+
+AI prediction model trained using 34 years of NASA POWER data.
+
+RMSE: 41.5 W/m².
+
+MAPE: 8.4%.
+
+These results demonstrate the potential of combining localized sensor measurements with machine learning for solar assessment.
+
+ 
+Applications & Potential Impact
+SolarSense is designed to support:
+
+Government & Utilities: National solar mapping, grid planning, and renewable energy policy development.
+
+Solar Installers & Investors: Rapid site evaluation and more informed investment decisions.
+
+Research & Education: Renewable energy analytics and practical IoT/AI learning.
+
+Local Communities: Improved access to solar feasibility information and sustainable energy opportunities.
+
+ 
+Future Development
+Potential future improvements include developing a distributed national irradiance dataset, integrating satellite imagery for shading detection, incorporating actual solar panel output sensors for model calibration, introducing LoRaWAN communication for remote locations, and developing a mobile application for field engineers.
+
+ 
+Achievement
+Selected for the Semi-Finals – Top 45 Teams out of 120+ Participants | Pitch Arena 2025
+
+Pitch Arena 2025 was organized by the Faculty of Engineering, University of Ruhuna, as part of the REXTRO 25th Silver Jubilee Exhibition.
+
+This project was developed by Team EurekaWave, consisting of Kanchana Bandara, Shanan Adams, Eashan Sithum, Hirushi Adikari, and myself.
+
+The experience provided valuable exposure to IoT system development, embedded hardware integration, machine learning, renewable energy technologies, cloud-based applications, and innovation-driven problem-solving.
+
+ 
+Project Vision
+SolarSense aims to transform a simple portable sensing device into an intelligent solar assessment solution, making renewable energy decisions more accessible, accurate, and affordable while supporting Sri Lanka's transition towards sustainable energy.
+
+Click To Enlarge Imageuser uploaded image
+Click To Enlarge Imageuser uploaded image
+Click To Enlarge Imageuser uploaded image
+Click To Enlarge Imageuser uploaded image
+Click To Enlarge Imageuser uploaded image
+Skills Demonstrated:
+Innovation
+ 277
+AI
+ 286
+IoT
+ 69

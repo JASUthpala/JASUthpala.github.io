@@ -18,7 +18,9 @@ PDF documents; and get in touch.
 - **Projects:** A selection of software, research, robotics, and engineering
   work, with dedicated detail pages.
 - **Experience:** Roles and contributions presented as a timeline.
-- **Achievements:** Direct links to certificates and appriciations.
+- **Achievements:** Direct links to certificates and appreciations.
+- **Industrial Exposure:** An OREL IT and Institute of Bankers of Sri Lanka
+  (IBSL) visit, with a gallery of visit photos.
 - **Contact:** Email, LinkedIn, GitHub, HackerRank, and Course Networking
   e-portfolio links.
 - **Responsive interface:** Layouts adapt to mobile and desktop screens, with
@@ -32,6 +34,8 @@ PDF documents; and get in touch.
   navigation and rider alerts.
 - **PeraVerse Smart Info Kiosk:** A university information kiosk showcased at
   EngEX 2025.
+- **SolarSense:** A portable solar-site assessment concept combining local
+  sensing, IoT, and machine learning.
 - **Human-Elephant Conflict Mitigation:** An eco-guard concept using acoustic
   sensing and AI-assisted visual detection.
 - **Line Following Robot:** A sensor-based robotics mini project.
@@ -45,6 +49,8 @@ PDF documents; and get in touch.
   university networks.
 
 Each project has a page in `projects/` with additional information.
+Project pages include photos and related PDF documents supplied in their
+matching folders under `images/`.
 
 ## Technologies
 

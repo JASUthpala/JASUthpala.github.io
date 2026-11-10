@@ -1,0 +1,11 @@
+Line Following Robot Mini Project
+
+This mini project marked our first hands-on experience in building a simple line-following robot as part of GP 118 at the Faculty of Engineering, University of Peradeniya. Using an Arduino microcontroller, IR sensors, DC motors, and custom-built circuitry, we designed and implemented a robot capable of autonomously detecting and following a predefined path. The project offered valuable exposure to embedded systems, sensor integration, motor control, and real-world hardware implementation. It was a rewarding experience that emphasized teamwork, problem-solving, and the practical application of core engineering principles. This foundation has motivated us to further refine the design and take on more advanced challenges in future projects.
+
+ Skills Demonstrated:
+Arduino
+
+Microcontroller
+
+Design
+

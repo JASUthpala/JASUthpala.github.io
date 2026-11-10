@@ -1,0 +1,794 @@
+# RoadEye – Smart Helmet
+### Smarter Riding. Safer Journeys.
+
+**RoadEye is an integrated smart motorcycle safety system designed to improve rider awareness, minimize distractions, and enhance road safety through intelligent hardware, software, and real-time communication.**
+
+[View Source Code] · [View Project Repository] · [Project Demonstration]
+
+---
+
+## 1. Project Overview
+
+RoadEye is a smart motorcycle safety system developed to enhance rider awareness and reduce accident risks. It integrates three main components: a smart helmet, a bike-mounted module, and a companion mobile application.
+
+By combining sensor technologies, wireless communication, a heads-up display (HUD), and intelligent software features, RoadEye provides riders with essential information and safety alerts without requiring them to take their hands off the handlebars or frequently look away from the road.
+
+The system is designed around hands-free and eyes-free interaction, allowing riders to access navigation information, riding data, and important notifications through visual, audio, and haptic feedback.
+
+**Project Details**
+
+- **Project Name:** RoadEye – Smart Helmet
+- **Project Type:** Third-Year Group Project (3YP)
+- **Project Group:** Group 15
+- **Institution:** Department of Computer Engineering, University of Peradeniya
+- **Project Duration:** February 2026 – July 2026
+- **Project Category:** Embedded Systems | IoT | Mobile Application Development | Product Design
+- **My Role:** Project Team Member
+- **Collaborators:** Hirushi Adikari, Janidu Senewirathne, N.S. Wickramanayaka
+
+---
+
+## 2. Motivation
+
+Motorcycle riders are particularly vulnerable on the road because they have limited protection and depend heavily on their own awareness and ability to respond to changing road conditions.
+
+Unlike modern cars equipped with advanced driver-assistance systems, most motorcycles lack integrated technologies that provide intelligent navigation assistance, environmental awareness, and emergency support.
+
+Furthermore, riders often need to look at their mobile phones for navigation, manually check their surroundings, or interact with devices while riding. These activities can increase distraction and cognitive load.
+
+These challenges motivated us to develop RoadEye: a smarter riding solution that brings essential information directly to the rider while maintaining focus on the road.
+
+---
+
+## 3. Problem Statement
+
+Existing motorcycle safety solutions have several limitations:
+
+- **Navigation Distractions:** Riders often need to look at mobile phone screens to follow navigation instructions.
+- **Limited Situational Awareness:** Conventional mirrors and helmets may not provide sufficient awareness of surrounding conditions and potential hazards.
+- **Delayed Emergency Response:** After an accident, contacting emergency contacts and communicating the rider's situation may be difficult.
+- **Lack of Integrated Safety Features:** Navigation, riding information, environmental monitoring, and emergency support are generally provided through separate devices or applications.
+- **Manual Interaction:** Many existing solutions require riders to interact physically with devices, increasing distraction.
+
+The main challenge is to provide essential riding information and safety assistance without introducing additional distractions or requiring unnecessary manual interaction.
+
+---
+
+## 4. Proposed Solution
+
+RoadEye introduces an integrated smart helmet system supported by a bike-mounted module and a mobile application.
+
+The helmet delivers important information through a heads-up display, audio output, and haptic feedback. The bike module collects and communicates relevant riding and sensor information, while the mobile application provides navigation, system configuration, notifications, and emergency-related functionality.
+
+The system aims to:
+
+- Provide navigation information through a helmet-mounted display.
+- Improve rider awareness through sensor-based information.
+- Deliver notifications using visual, audio, and haptic feedback.
+- Support emergency communication.
+- Provide weather and other relevant riding information.
+- Enable wireless communication between the helmet, bike module, and mobile application.
+- Offer a more convenient and less distracting riding experience.
+
+---
+
+## 5. System Architecture
+
+RoadEye consists of three major components that work together to provide an integrated riding experience.
+
+### 5.1 Smart Helmet Unit
+
+The smart helmet is the primary user-interaction component. It is designed to deliver important information directly to the rider.
+
+**Main components and functionalities:**
+
+- Heads-Up Display (HUD) for navigation and other important information.
+- Audio output through an integrated speaker unit.
+- Haptic feedback for alerts and notifications.
+- LED indicators for visual status information.
+- Inertial Measurement Unit (IMU) for motion and orientation-related data.
+- Helmet buckle and wearing-related sensing.
+- Wireless communication with the bike module and mobile application.
+
+### 5.2 Bike-Mounted Module
+
+The bike module acts as an additional sensing and communication unit.
+
+It supports the collection and transmission of relevant riding information and enables communication between the motorcycle-related hardware and the rest of the RoadEye system.
+
+**Main responsibilities:**
+
+- Collecting sensor information.
+- Communicating with the helmet and mobile application.
+- Supporting the distribution of relevant riding information.
+- Managing power-related hardware components.
+- Supporting the overall system's wireless communication.
+
+### 5.3 Mobile Application
+
+The mobile application acts as the main software interface for RoadEye.
+
+It allows users to access navigation, manage system settings, view information, and use safety-related features.
+
+**Main features:**
+
+- User registration and authentication.
+- Dashboard with relevant riding information.
+- Navigation and destination selection.
+- Weather information.
+- Emergency contact management.
+- Notifications and system status.
+- Music service integration.
+- Ride-related information and summaries.
+
+**[Insert System Architecture Diagram Here]**
+
+*Suggested diagram: Mobile Application ↔ Bike Module ↔ Smart Helmet, showing the communication technologies and information exchanged between the components.*
+
+---
+
+## 6. Key Features
+
+### 6.1 Heads-Up Display Navigation
+
+The HUD presents navigation information within the rider's field of view, reducing the need to look down at a mobile phone.
+
+The navigation interface was developed to display essential information in a compact format suitable for the helmet visor.
+
+### 6.2 Wireless Communication
+
+RoadEye uses wireless communication to exchange information between the mobile application, helmet, and bike module.
+
+The communication system was developed to transfer sensor information and navigation-related content while maintaining coordination between the components.
+
+### 6.3 Emergency Assistance
+
+The mobile application includes an emergency section that allows users to select up to five emergency contacts.
+
+The application can use the selected contacts to support emergency message communication.
+
+### 6.4 Weather Information
+
+The application provides weather information relevant to the rider's current location and navigation destination.
+
+Weather information is presented through the application dashboard using visual indicators.
+
+### 6.5 Audio and Music Integration
+
+The application supports access to external music services, allowing users to select supported services and launch the corresponding applications.
+
+Song-related information can also be shared with the helmet display.
+
+### 6.6 Sensor Integration
+
+RoadEye integrates sensor modules to collect relevant information about movement and riding conditions.
+
+The collected data can be transmitted to the application and backend for processing and presentation.
+
+### 6.7 Additional Safety and Convenience Features
+
+The overall design also considers features such as:
+
+- Helmet buckle reminders.
+- Helmet wearing detection.
+- Anti-theft functionality.
+- Riding information summaries.
+- System notifications.
+- Customizable system settings.
+
+*Note: Distinguish between fully implemented features, tested features, and planned features when presenting the final version of the project.*
+
+---
+
+## 7. Technologies and Tools
+
+RoadEye combines embedded hardware development, mobile application development, backend engineering, database management, and product design.
+
+### Hardware and Embedded Systems
+- ESP32
+- Embedded C / C
+- Sensors and electronic modules
+- Power management circuitry
+- Wireless communication
+
+### Mobile Application Development
+- React Native
+- Expo
+- JavaScript
+- Mobile UI development
+
+### Backend and Database
+- Java
+- Spring Boot
+- REST APIs
+- Supabase
+- PostgreSQL
+- JWT Authentication
+
+### Communication
+- Wi-Fi
+- Bluetooth
+- UDP communication
+- Binary data transmission
+- JPEG image/frame transmission
+
+### Design and Development Tools
+- Visual Studio Code
+- Git and GitHub
+- UI/UX design tools
+- 3D modelling and product design tools
+
+*Only retain the technologies that were actually used in the final implementation. Update the backend and database details to match the deployed version of your project.*
+
+---
+
+## 8. Development Process and Implementation
+
+The development of RoadEye involved several stages, beginning with project planning and proposal development and progressing through hardware design, software development, system integration, testing, and final product preparation.
+
+### 8.1 Project Planning and Proposal Development
+**02 February 2026 – 10 February 2026**
+
+We began by planning the overall project and preparing a detailed proposal.
+
+During this phase, we:
+
+- Identified the main safety challenges faced by motorcycle riders.
+- Evaluated suitable hardware components.
+- Estimated the project budget.
+- Defined the main software and security requirements.
+- Designed the overall system architecture.
+- Identified the responsibilities of the helmet, bike module, and mobile application.
+
+The initial design established the foundation for an integrated system combining a smart helmet, a bike-mounted module, and a companion mobile application.
+
+**[Insert initial design diagrams and proposal screenshots]**
+
+### 8.2 First Milestone – Project Proposal
+**11 February 2026**
+
+We successfully presented our project proposal, achieving the first major milestone.
+
+The presentation provided an opportunity to receive feedback from the evaluation panel and identify areas that required further attention.
+
+**Key feedback received:**
+
+- Give greater attention to helmet weight and proper weight distribution.
+- Consider suitable water and dust resistance ratings.
+- Provide options to disable certain features if they malfunction.
+- Include a mechanism to switch the display on and off.
+- Conduct more experiments and testing to validate the system.
+- Improve presentation delivery and maintain eye contact with panel members.
+
+The panel also acknowledged the improvements made compared with the initial mock-up design.
+
+**[Insert Milestone 1 presentation and photographs]**
+
+### 8.3 Initial Helmet and HUD Development
+**16 February 2026 – 17 February 2026**
+
+We started developing the helmet module and heads-up display.
+
+The initial work focused on evaluating the display concept and determining whether information could be projected according to our proposed design.
+
+This phase helped us explore the practical challenges of integrating a display system into a motorcycle helmet.
+
+**[Insert initial HUD prototype photographs]**
+
+### 8.4 Mobile Application UI and Authentication
+**18 February 2026 – 22 February 2026**
+
+We designed the initial user interface of the RoadEye mobile application and began implementing its frontend.
+
+The first development stage focused on the signup and login interfaces.
+
+Both pages were successfully implemented, establishing the foundation for the application's authentication workflow.
+
+**[Insert login and signup screenshots]**
+
+### 8.5 Frontend, Backend, and Hardware Development
+**25 February 2026 – 01 March 2026**
+
+We continued developing the frontend and backend while working on the hardware modules in parallel.
+
+During this phase, we:
+
+- Developed the mobile application's frontend.
+- Continued hardware module development.
+- Explored the integration of different software and hardware components.
+- Integrated external music services such as Spotify, YouTube Music, and Apple Music through application launching and service redirection.
+- Implemented location and notification permission requests.
+- Used mock user accounts while the backend integration was still in progress.
+
+This phase provided valuable experience in coordinating hardware and software development.
+
+**[Insert mobile application and music integration screenshots]**
+
+### 8.6 Emergency Assistance Implementation
+**16 April 2026 – 20 April 2026**
+
+We introduced an emergency page to the mobile application and implemented its initial emergency contact functionality.
+
+The application requests access to the user's contacts and allows the user to select up to five emergency contacts.
+
+These selected contacts are then used by the emergency messaging functionality.
+
+**[Insert emergency page and contact selection screenshots]**
+
+### 8.7 Navigation and Weather Integration
+**21 April 2026 – 23 April 2026**
+
+We added a navigation section to the application dashboard.
+
+The navigation workflow allows users to:
+
+- Open the map interface.
+- Select a destination.
+- Start navigation.
+- View distance and estimated travel time.
+- Access speed information.
+- Continue navigation in the background.
+- View whether navigation is currently active.
+
+We also integrated weather information for the current location and selected destination.
+
+After resolving several implementation issues, the navigation feature was successfully integrated into the application.
+
+**[Insert navigation interface and dashboard screenshots]**
+
+### 8.8 Backend and Database Integration
+**24 April 2026**
+
+We successfully connected the backend and database with the mobile application's login and signup functionality.
+
+At the same time, we continued developing the helmet and bike hardware modules.
+
+The ESP32 was programmed to handle the required hardware logic, and individual sensor components were being tested before complete system integration.
+
+**[Insert backend, database, and hardware testing screenshots]**
+
+### 8.9 ESP32 and Mobile Application Communication
+**25 April 2026**
+
+One of the major technical challenges was establishing reliable communication between the ESP32 module and the mobile application.
+
+We implemented Wi-Fi communication using UDP packets and binary data transmission.
+
+After resolving several communication errors, we successfully established a connection between the application and the ESP32, allowing sensor data to be transmitted and received.
+
+We also explored the transmission of navigation information as JPEG image frames, with the intention of transmitting only changed frames to reduce unnecessary data transfer.
+
+Meanwhile:
+
+- The helmet module design was completed and prepared for 3D printing.
+- The HUD frame interface was completed.
+- The backend was further developed to receive sensor data and perform the required processing.
+
+**[Insert ESP32 communication screenshots and helmet design]**
+
+### 8.10 Complete System Integration
+**26 April 2026**
+
+We began integrating the mobile application, backend, and ESP32 hardware module into a single working system.
+
+The first major integration test focused on navigation.
+
+After resolving several issues, navigation information was successfully displayed on the helmet display.
+
+We then moved on to audio transmission. Although the initial audio implementation produced sound, continuous audio transmission was not yet functioning correctly and required further development.
+
+The backend also received sensor information and processed it for presentation in the mobile application.
+
+**[Insert integrated system and HUD screenshots]**
+
+### 8.11 Second Milestone – Integrated Prototype
+**28 April 2026**
+
+We successfully completed the second milestone.
+
+By this stage, the hardware design was ready for demonstration, and the mobile application and hardware modules were working together.
+
+This milestone represented an important achievement in bringing the individual components together into an integrated RoadEye prototype.
+
+**[Insert Milestone 2 photographs and presentation materials]**
+
+### 8.12 Hardware Redesign and Safety Improvements
+**05 May 2026 – 12 May 2026**
+
+Following the second milestone, we reviewed the feedback received and discussed the improvements required for the next development stage.
+
+On 7 May, we redesigned the hardware enclosure and prepared the updated design for printing.
+
+On 12 May, we identified a potential safety issue with the helmet mouthpiece. To address this, we designed an improved safety mouthpiece suitable for the helmet structure.
+
+**[Insert redesigned hardware and mouthpiece photographs]**
+
+### 8.13 Network and Hardware Improvements
+**18 May 2026 – 26 May 2026**
+
+During this period, we explored suitable methods for delivering emergency alerts to users and considered the limitations of available third-party messaging platforms and their associated costs.
+
+On 23 May, we successfully developed a method to provide a shared network connection for the application and helmet using the ESP32 module.
+
+By 26 May, the power circuit and speaker modules were also functioning successfully.
+
+These developments helped improve the communication and hardware integration of the overall system.
+
+**[Insert network and hardware module photographs]**
+
+### 8.14 Backend Deployment and Application Refinement
+**31 May 2026 – 01 June 2026**
+
+We started deploying the application infrastructure to AWS, including the backend and database components.
+
+We also focused on improving the mobile application's overall appearance and user experience.
+
+The application received a visual redesign that included:
+
+- A refined dark colour palette.
+- Updated icons.
+- Improved page layouts.
+- Additional application pages.
+- General UI refinements.
+
+**[Insert updated application screenshots]**
+
+### 8.15 System Testing and Performance Improvements
+**03 June 2026 – 07 June 2026**
+
+We tested the mobile application and helmet module together and continued improving their integration.
+
+During testing, we identified a delay when transmitting map information to the helmet. We investigated the issue and implemented improvements to reduce the delay.
+
+Additional improvements included:
+
+- Sharing song information with the helmet display.
+- Displaying weather icons correctly.
+- Improving content loading performance.
+- Testing the display and application integration.
+- Developing the fiberglass mouthpiece to accommodate the required components.
+
+By 7 June, the mouthpiece was ready for component installation, bringing the hardware development closer to completion.
+
+**[Insert helmet, mouthpiece, and application integration photographs]**
+
+### 8.16 Third Milestone – Functional RoadEye Prototype
+**16 June 2026**
+
+We presented the fully functional RoadEye prototype at the third milestone presentation.
+
+The presentation demonstrated the progress made in integrating the hardware, mobile application, and supporting software components.
+
+The panel provided valuable feedback, particularly recommending further improvements to the navigation projection system on the helmet visor.
+
+**[Insert Milestone 3 presentation photographs and prototype images]**
+
+### 8.17 HUD Navigation Refinement
+**17 June 2026 – 20 June 2026**
+
+Following the third milestone, we focused on improving the navigation interface displayed on the helmet visor.
+
+The work included:
+
+- Reviewing the panel's feedback.
+- Researching suitable HUD layouts.
+- Developing an improved navigation interface.
+- Integrating the updated display with the existing RoadEye system.
+- Testing the display under different riding scenarios.
+- Conducting battery power tests to evaluate the operating time of the helmet and bike modules under continuous operation.
+
+This phase focused on improving the usability and practicality of the navigation display.
+
+**[Insert updated HUD interface and battery testing photographs]**
+
+### 8.18 Product Ordering Platform Development
+**27 June 2026 – 01 July 2026**
+
+We began developing a product ordering platform to support the RoadEye product concept.
+
+The initial work involved planning the system architecture and designing the user interface.
+
+Development continued with:
+
+- Product listing functionality.
+- Navigation between product pages.
+- Individual product details.
+- Ordering workflow implementation.
+
+On 1 July, we also finalized the RoadEye logo designs and completed the brand kit, including the colour palette, typography, and branding guidelines.
+
+**[Insert product ordering website screenshots and branding designs]**
+
+### 8.19 Real-World Motorcycle Testing
+**08 July 2026**
+
+We conducted real-world testing by mounting the bike module on a motorcycle and using the helmet module under actual riding conditions.
+
+The testing focused on:
+
+- Hardware operation.
+- Communication between the modules.
+- Overall system performance.
+- Reliability under practical riding conditions.
+
+This stage helped us evaluate the prototype beyond controlled development and laboratory testing.
+
+**[Insert real-world motorcycle testing photographs or video]**
+
+### 8.20 Documentation and Product Ordering Platform Completion
+**12 July 2026 – 19 July 2026**
+
+We focused on preparing the documentation and supporting materials required for the product.
+
+The work included:
+
+- Designing the RoadEye User Guide.
+- Preparing installation instructions.
+- Documenting operating procedures.
+- Preparing safety guidelines.
+- Creating troubleshooting information.
+- Developing order management features for the product ordering platform.
+- Fixing identified issues and conducting final platform testing.
+
+On 19 July, we also designed the product packaging box, incorporating the RoadEye branding, product information, and packaging layout.
+
+**[Insert user guide, manual, website, and packaging designs]**
+
+### 8.21 Final Product Preparation and Verification
+**24 July 2026**
+
+We prepared all RoadEye product components and completed the full product setup.
+
+This included:
+
+- Smart helmet module.
+- Bike-mounted module.
+- Mobile application.
+- Accessories.
+- Product packaging.
+
+We also performed final system verification to ensure that the hardware and software components were functioning correctly before the final demonstration.
+
+**[Insert complete product photographs]**
+
+### 8.22 Mock Product Pitching Presentation
+**30 July 2026**
+
+We conducted a mock product pitching session to prepare for the official product presentation.
+
+The session provided an opportunity to practise presenting RoadEye, demonstrate its features, and receive feedback on the overall product pitch.
+
+Based on the feedback, we identified areas for final improvement in the presentation and product demonstration.
+
+**[Insert mock pitching presentation photographs]**
+
+---
+
+## 9. Technical Challenges and Solutions
+
+Developing RoadEye involved several challenges across hardware design, software development, and system integration.
+
+### 9.1 Helmet Display Integration
+
+**Challenge:** Integrating a navigation display into a motorcycle helmet while maintaining visibility and usability.
+
+**Approach:** We experimented with the HUD projection concept, refined the display interface, and improved the visor navigation layout based on testing and panel feedback.
+
+### 9.2 Wireless Data Communication
+
+**Challenge:** Establishing reliable communication between the mobile application and ESP32 module.
+
+**Approach:** We implemented Wi-Fi communication using UDP packets and binary data transmission, resolving connectivity and data-transfer issues during integration.
+
+### 9.3 Navigation Frame Transmission
+
+**Challenge:** Transmitting navigation information to the helmet display while minimizing unnecessary data transfer and delays.
+
+**Approach:** We explored JPEG image-frame transmission and the transfer of changed frames to improve the efficiency of the communication process.
+
+### 9.4 Audio Transmission
+
+**Challenge:** Achieving stable audio transmission through the helmet speaker.
+
+**Approach:** We tested the audio functionality during system integration and continued working on resolving the initial sound-quality and continuous-transmission issues.
+
+### 9.5 Hardware Design and Safety
+
+**Challenge:** Designing a helmet enclosure that accommodates the electronic components while considering weight distribution, comfort, and rider safety.
+
+**Approach:** We redesigned the hardware enclosure and developed an improved mouthpiece after identifying a potential safety issue.
+
+### 9.6 Power Management
+
+**Challenge:** Ensuring that the helmet and bike modules could operate for a practical duration.
+
+**Approach:** We developed the power circuit and conducted battery tests under continuous operation to evaluate operating time.
+
+### 9.7 Software and Hardware Integration
+
+**Challenge:** Combining the mobile application, backend, ESP32, and helmet hardware into one coordinated system.
+
+**Approach:** We developed and tested the individual components before progressively integrating them, identifying and resolving issues during each stage.
+
+---
+
+## 10. Testing and Evaluation
+
+Testing was an important part of the RoadEye development process.
+
+We performed different levels of testing throughout the project, from individual component testing to complete system integration and real-world motorcycle testing.
+
+### Component-Level Testing
+- Tested individual sensor modules.
+- Tested ESP32 functionality.
+- Evaluated the power circuit.
+- Tested the speaker unit.
+- Checked the helmet display.
+
+### Software Testing
+- Tested user registration and login.
+- Tested navigation and destination selection.
+- Tested emergency contact selection.
+- Tested weather information display.
+- Tested mobile application and backend communication.
+
+### Integration Testing
+- Tested communication between the mobile application and ESP32.
+- Verified sensor data transmission.
+- Tested navigation information displayed on the helmet.
+- Checked the interaction between the hardware and software components.
+
+### Real-World Testing
+- Mounted the bike module on a motorcycle.
+- Used the helmet module under actual riding conditions.
+- Evaluated system reliability and communication.
+- Conducted battery operating-time tests.
+
+**[Insert testing photographs, screenshots, and demonstration videos]**
+
+---
+
+## 11. Product Design and Branding
+
+In addition to the engineering development, we worked on preparing RoadEye as a complete product concept.
+
+This included:
+
+- RoadEye logo design.
+- Brand identity development.
+- Colour palette and typography selection.
+- Product ordering website.
+- Product information and ordering workflow.
+- User guide and customer manual.
+- Product packaging design.
+
+These activities helped us consider not only the technical implementation but also the usability, presentation, and overall product experience.
+
+**[Insert RoadEye logo, brand kit, ordering website, and packaging images]**
+
+---
+
+## 12. My Contributions
+
+RoadEye was developed collaboratively by a team of Computer Engineering undergraduates.
+
+My contributions to the project included participating in the development and integration of the system across its hardware and software components.
+
+**Add your specific responsibilities here**, based on the work you personally completed. For example:
+
+- Mobile application frontend development.
+- Backend and database integration.
+- Hardware and software communication.
+- ESP32 integration and data transmission.
+- Navigation and HUD integration.
+- Testing and debugging.
+- Technical documentation and product preparation.
+
+I also gained experience working collaboratively across embedded systems, mobile application development, networking, and product engineering.
+
+*Important: Keep only the responsibilities you personally handled. You can mention team achievements elsewhere on the page without presenting all of them as individual contributions.*
+
+---
+
+## 13. Skills Demonstrated
+
+The RoadEye project provided practical experience in several areas of computer engineering and software development.
+
+- Web Design
+- C Programming
+- JavaScript
+- Programming
+- Computer Networking
+- Python
+- Embedded Systems Development
+- Mobile Application Development
+- Hardware–Software Integration
+- Wireless Communication
+- Backend Development
+- Database Management
+- UI/UX Design
+- System Testing and Debugging
+- Team Collaboration
+- Technical Documentation
+
+---
+
+## 14. Project Outcomes
+
+RoadEye progressed from an initial safety-system concept to an integrated smart helmet prototype.
+
+The major outcomes included:
+
+- Development of a smart helmet with a HUD-based navigation concept.
+- Development of a bike-mounted hardware module.
+- Development of a companion mobile application.
+- Implementation of user authentication and application functionality.
+- Integration of navigation and weather information.
+- Development of emergency contact functionality.
+- Establishment of wireless communication between the application and hardware.
+- Integration of sensor information into the software system.
+- Development of product documentation, branding, and packaging.
+- Development of a product ordering platform.
+- Completion of multiple project milestones and prototype demonstrations.
+
+The project provided practical experience in developing a multidisciplinary engineering solution that combines hardware, software, networking, and product design.
+
+---
+
+## 15. Future Improvements
+
+Although the prototype demonstrates the main concept and integrated functionality, several areas could be explored further.
+
+- Improve HUD visibility under different lighting conditions.
+- Further optimize helmet weight and balance.
+- Improve audio transmission quality.
+- Enhance wireless communication reliability.
+- Improve power efficiency and battery operating time.
+- Conduct more extensive testing under different weather and road conditions.
+- Further improve the accuracy and reliability of safety alerts.
+- Enhance environmental protection against water and dust.
+- Improve emergency alert delivery mechanisms.
+- Conduct additional usability and rider-safety evaluations.
+
+---
+
+## 16. Project Resources
+
+Explore the development work and supporting materials associated with RoadEye.
+
+- **GitHub Repository:** [Insert repository link]
+- **Project Demonstration:** [Insert video link]
+- **Project Proposal:** [Insert document link]
+- **User Guide:** [Insert document link]
+- **Customer Manual:** [Insert document link]
+- **Product Ordering Website:** [Insert website link]
+- **Project Presentation:** [Insert presentation link]
+
+---
+
+## 17. Collaborators
+
+RoadEye was developed as a collaborative group project.
+
+- **Hirushi Adikari**
+- **Janidu Senewirathne**
+- **N.S. Wickramanayaka**
+
+**Institution:** Department of Computer Engineering, University of Peradeniya.
+
+---
+
+### Smarter Riding. Safer Journeys.
+
+RoadEye represents our effort to combine computer engineering, embedded systems, networking, and software development to address a real-world road safety challenge.
+
+Skills Demonstrated:
+WebDesign
+C
+JavaScript
+Programming
+ComputerNetworking
+Python
+
+
+GitHub: https://github.com/cepdnaclk/e21-3yp-RoadEye

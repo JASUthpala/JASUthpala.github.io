@@ -1,0 +1,451 @@
+# PERAVERSE – Smart Info Kiosk for EngEx 2025
+### Making Exhibition Experiences Smarter and More Interactive
+
+**CO227 – Computer Engineering Project | Department of Computer Engineering | University of Peradeniya | 2025**
+
+---
+
+## 1. Project Overview
+
+PERAVERSE is a real-time digital twin platform developed to enhance visitor experience and crowd management at EngEx 2025, the Faculty of Engineering's annual exhibition.
+
+As part of a team of nine members, we developed the **Smart Info Kiosk**, an interactive, touch-friendly web application designed to help visitors explore the exhibition, discover exhibits, navigate exhibition locations, and access event information conveniently, even without an internet connection.
+
+The platform brings essential exhibition information into a centralized system by integrating interactive navigation, event management, exhibit information, live crowd monitoring, real-time notifications, and an AI-powered conversational assistant.
+
+Designed with accessibility and ease of use in mind, the kiosk provides an intuitive interface suitable for visitors of different ages and technical backgrounds.
+
+**Project Details**
+
+- **Project Name:** PERAVERSE – Smart Info Kiosk
+- **Course:** CO227 – Computer Engineering Project
+- **Institution:** Department of Computer Engineering, University of Peradeniya
+- **Event:** EngEx 2025
+- **Project Year:** 2025
+- **Team Size:** 9 Members
+- **Project Category:** Full-Stack Development | Web Applications | Artificial Intelligence | Database Systems
+- **My Contribution:** AI Chatbot Development
+
+---
+
+## 2. Motivation
+
+University exhibitions attract large numbers of visitors who need to access information about events, exhibits, departments, demonstrations, and exhibition locations.
+
+However, finding relevant information in a large exhibition environment can be challenging. Visitors may have difficulty locating specific exhibits, identifying ongoing events, understanding the exhibition layout, or obtaining answers to general questions.
+
+Traditional information boards and printed guides provide limited interactivity and may not always offer up-to-date information.
+
+These challenges motivated us to develop PERAVERSE, a centralized digital platform that makes exhibition information more accessible while improving visitor engagement and supporting exhibition management.
+
+---
+
+## 3. Problem Statement
+
+Managing visitor information and navigation during a large-scale exhibition presents several challenges.
+
+- **Information Accessibility:** Visitors may struggle to find relevant information about exhibits, events, departments, and demonstrations.
+- **Navigation Difficulties:** Locating specific buildings and exhibition areas can be difficult, particularly for first-time visitors.
+- **Crowd Management:** Understanding visitor distribution across different buildings and exhibition areas is important for effective crowd management.
+- **Event Awareness:** Visitors may miss important sessions, demonstrations, or scheduled events without timely notifications.
+- **Limited Interaction:** Traditional information boards and printed guides do not provide conversational or personalized assistance.
+- **Information Centralization:** Exhibition information is often distributed across different sources, making it difficult for visitors to access everything in one place.
+
+The main challenge was to create an accessible, interactive, and centralized information system that could improve the overall exhibition experience.
+
+---
+
+## 4. Proposed Solution
+
+PERAVERSE introduces an interactive Smart Info Kiosk that combines multiple exhibition-related services into one web-based platform.
+
+The system provides visitors with a centralized interface to explore exhibition information, navigate locations, monitor event schedules, receive notifications, and interact with an AI-powered chatbot.
+
+The platform also supports exhibition management through features such as crowd monitoring, event updates, announcements, and visitor feedback collection.
+
+**Main objectives:**
+
+- Provide centralized access to exhibition information.
+- Improve visitor navigation through interactive maps.
+- Display event schedules and real-time event statuses.
+- Provide information about exhibits and departments.
+- Support crowd monitoring through visual representations.
+- Deliver timely notifications and announcements.
+- Enable conversational interaction through an AI-powered chatbot.
+- Collect visitor feedback to support exhibition evaluation.
+- Provide an accessible kiosk experience, including offline usage.
+
+---
+
+## 5. Key Features
+
+### 5.1 Event Management
+
+The platform provides a searchable event schedule that allows visitors to explore exhibition activities.
+
+Key functionalities include:
+
+- Searchable event listings.
+- Ongoing, Upcoming, and Completed event statuses.
+- Event ratings.
+- Automatic notifications.
+- Live countdowns for upcoming events.
+
+### 5.2 Exhibit Information
+
+Visitors can explore different exhibition exhibits through a centralized information interface.
+
+The system provides:
+
+- Exhibit descriptions.
+- Search functionality.
+- Relevant tags.
+- Location details.
+- Information to help visitors discover exhibits of interest.
+
+### 5.3 Interactive Exhibition Map
+
+The interactive map helps visitors locate exhibition buildings and exhibits.
+
+Key functionalities include:
+
+- Building search.
+- Location-based navigation.
+- Highlighting selected buildings and exhibits.
+- Linking relevant information to exhibition locations.
+
+### 5.4 Live Crowd Monitoring
+
+The platform includes visual crowd monitoring to help represent visitor distribution across exhibition buildings.
+
+Key functionalities include:
+
+- Colour-coded crowd density heat maps.
+- Visitor count visualization.
+- Building capacity information.
+- Visual representation of crowd distribution.
+
+### 5.5 Real-Time Notifications
+
+The platform supports automatic event alerts and custom announcements.
+
+An administrative interface allows announcements to be managed and delivered to visitors through the kiosk.
+
+### 5.6 AI-Powered Chatbot
+
+An integrated conversational assistant helps visitors quickly find exhibition-related information.
+
+Visitors can ask questions about events, exhibits, departments, demonstrations, and general exhibition information.
+
+The chatbot also supports location-related responses that connect visitors to the interactive exhibition map.
+
+### 5.7 Visitor Feedback
+
+The system provides a feedback mechanism through which visitors can submit ratings and optional comments.
+
+Feedback is stored in PostgreSQL, with automatic CSV backups to support data preservation and further analysis.
+
+---
+
+## 6. System Architecture
+
+PERAVERSE integrates multiple software components to provide a centralized exhibition information platform.
+
+### 6.1 Frontend Application
+
+The frontend provides the interactive user interface through which visitors access the kiosk functionalities.
+
+It includes the event management interface, exhibit information pages, interactive map, crowd monitoring views, notifications, and chatbot interface.
+
+### 6.2 Backend Services
+
+The backend handles application requests, processes information, and provides REST APIs for communication between the frontend and database.
+
+It also supports chatbot query processing and other application functionalities.
+
+### 6.3 Database Layer
+
+The database stores structured exhibition information and visitor-related data.
+
+Supabase and PostgreSQL were used to support structured data management and database queries.
+
+### 6.4 AI Chatbot Component
+
+The chatbot operates as a conversational interface integrated into the main kiosk application.
+
+It receives visitor questions, processes queries, searches relevant exhibition information, and generates responses.
+
+Location-related responses are also connected to the interactive exhibition map.
+
+**[Insert Overall System Architecture Diagram]**
+
+*Suggested diagram: Visitor → React Frontend → Backend REST APIs → PostgreSQL/Supabase, with the AI Chatbot represented as an integrated service.*
+
+---
+
+## 7. My Contribution – AI Chatbot Development
+
+One of my primary responsibilities in PERAVERSE was developing the AI-powered chatbot together with Deshan.
+
+The chatbot was designed to serve as a conversational assistant within the Smart Info Kiosk, allowing visitors to access exhibition information through natural-language questions rather than manually searching through different sections of the application.
+
+### 7.1 Chatbot Functionalities
+
+The chatbot was designed to answer visitor questions related to:
+
+- Event schedules and session details.
+- Exhibit locations and descriptions.
+- Departmental information.
+- Ongoing demonstrations and talks.
+- General FAQs about EngEx 2025.
+
+It also supported location-based responses that connected visitors with the interactive exhibition map.
+
+### 7.2 Frontend Development
+
+I contributed to developing the chatbot frontend using React.js.
+
+The frontend included:
+
+- A dedicated chatbot page.
+- Interactive chat interface.
+- Message display and conversation interaction.
+- An easily accessible chatbot icon across kiosk screens.
+- Integration with the backend chatbot API.
+
+The interface was designed to make the chatbot easily accessible without interrupting the visitor's navigation through the kiosk.
+
+### 7.3 Backend Development
+
+I contributed to developing the chatbot backend using Node.js and Express.js.
+
+The backend REST API handled chatbot requests, processed visitor queries, managed chat sessions, and generated responses.
+
+The implementation included:
+
+- API endpoint development.
+- Query processing.
+- Response generation.
+- Session tracking.
+- Error handling.
+- Communication between the frontend and database.
+
+### 7.4 Database Integration
+
+Supabase and PostgreSQL were integrated to support structured exhibition information and knowledge-base queries.
+
+The chatbot used stored information to retrieve relevant details and provide answers to visitor questions.
+
+### 7.5 Query Processing and Response Optimization
+
+Several mechanisms were implemented to improve chatbot functionality and reliability.
+
+These included:
+
+- **Keyword Extraction:** Identifying important terms from visitor questions.
+- **Case-Insensitive Search:** Improving query matching regardless of letter capitalization.
+- **Response Caching:** Reusing previously generated responses where appropriate to reduce repeated processing.
+- **Rate Limiting:** Controlling request frequency to protect the backend from excessive requests.
+- **Session Tracking:** Maintaining information about individual chat sessions.
+- **Error Handling:** Managing unexpected situations and improving system stability.
+
+### 7.6 Interactive Map Integration
+
+An important aspect of the chatbot was its integration with the interactive exhibition map.
+
+When visitors asked location-related questions, the chatbot could provide relevant location information linked to the map.
+
+This allowed visitors to move from conversational information retrieval to visual navigation within the exhibition.
+
+**[Insert chatbot interface screenshots]**
+
+**[Insert chatbot responses showing event and exhibit information]**
+
+**[Insert location-related chatbot response and interactive map integration]**
+
+---
+
+## 8. Testing and Validation
+
+Testing was performed to validate the chatbot functionality, backend services, and communication between the different application components.
+
+### 8.1 API Testing
+
+Postman was used to test chatbot API endpoints and verify request-response behaviour.
+
+Testing focused on:
+
+- API endpoint functionality.
+- Query submission.
+- Response generation.
+- Error responses.
+- Frontend-backend communication.
+
+### 8.2 Unit Testing
+
+Jest and TypeScript were used to support unit testing of the chatbot implementation.
+
+Individual functionalities were tested to identify errors and verify expected behaviour.
+
+### 8.3 Integration Testing
+
+Integration testing focused on verifying communication between the chatbot frontend, backend API, and database.
+
+The tests helped validate query processing and the interaction between the different software components.
+
+### 8.4 Query Validation
+
+Different types of exhibition-related questions were used to evaluate chatbot query processing and response behaviour.
+
+The testing covered event-related questions, exhibit information, departmental information, general FAQs, and location-related queries.
+
+**[Insert Postman testing screenshots]**
+
+**[Insert Jest test results]**
+
+---
+
+## 9. Technology Stack
+
+The project combined modern frontend technologies, backend frameworks, database technologies, and software testing tools.
+
+### Frontend Development
+- React.js
+- Vite
+- JavaScript
+
+### Backend Development
+- Node.js
+- Express.js
+- REST APIs
+
+### Database Management
+- PostgreSQL
+- Supabase
+
+### Testing and Validation
+- Jest
+- TypeScript
+- Postman
+
+### Development Areas
+- Full-Stack Web Development
+- Conversational Assistant Development
+- API Integration
+- Database Management
+- Software Testing
+- UI/UX Development
+
+---
+
+## 10. Challenges and Solutions
+
+Developing the chatbot involved several challenges related to query processing, information retrieval, system integration, and performance.
+
+### 10.1 Understanding Visitor Queries
+
+**Challenge:** Visitors may ask the same question using different words, sentence structures, or capitalization.
+
+**Approach:** Keyword extraction and case-insensitive search were implemented to improve query matching.
+
+### 10.2 Retrieving Relevant Exhibition Information
+
+**Challenge:** The chatbot needed to provide relevant information from structured exhibition data.
+
+**Approach:** Supabase and PostgreSQL were integrated to support structured knowledge-base queries.
+
+### 10.3 Frontend and Backend Integration
+
+**Challenge:** The chatbot interface needed to communicate reliably with the backend services.
+
+**Approach:** REST APIs were implemented using Node.js and Express.js to handle chatbot requests and responses.
+
+### 10.4 Response Performance
+
+**Challenge:** Repeated queries and excessive requests could affect backend performance.
+
+**Approach:** Response caching and rate limiting were introduced to improve efficiency and control request frequency.
+
+### 10.5 Maintaining Conversation Sessions
+
+**Challenge:** Chat interactions needed to be organized and associated with individual sessions.
+
+**Approach:** Session tracking was implemented to support chatbot interaction management.
+
+---
+
+## 11. Project Outcomes
+
+PERAVERSE resulted in the development of an interactive Smart Info Kiosk that brought essential exhibition information and visitor services into a centralized platform.
+
+The major outcomes included:
+
+- An interactive, touch-friendly exhibition kiosk.
+- Centralized event and exhibit information.
+- Interactive exhibition map and navigation.
+- Visual crowd monitoring.
+- Real-time notifications and announcements.
+- An integrated AI-powered conversational assistant.
+- Location-related chatbot responses linked to the interactive map.
+- Visitor feedback collection.
+- Structured data management using PostgreSQL and Supabase.
+
+My contribution to chatbot development provided an important conversational interface through which visitors could access exhibition information more conveniently.
+
+---
+
+## 12. Learning Outcomes
+
+Working on PERAVERSE provided practical experience in developing a full-stack web application as part of a collaborative engineering project.
+
+Through my involvement in AI chatbot development, I gained experience in:
+
+- Building interactive frontend interfaces using React.js.
+- Developing backend services using Node.js and Express.js.
+- Designing and integrating REST APIs.
+- Working with PostgreSQL and Supabase.
+- Implementing keyword-based query processing.
+- Improving query matching and response performance.
+- Managing chatbot sessions and API requests.
+- Performing unit and integration testing.
+- Debugging and integrating multiple software components.
+- Collaborating with a development team to deliver a complete application.
+
+The project also helped me understand how software engineering concepts can be applied to solve practical problems in a real-world exhibition environment.
+
+---
+
+## 13. Project Resources
+
+Explore the source code and supporting materials associated with PERAVERSE.
+
+- **GitHub Repository:** https://github.com/ShashikaSathsarani/Peraverse_Kiosk
+- **Project:** PERAVERSE – Smart Info Kiosk for EngEx 2025
+- **User Manual:** [Insert user manual link]
+- **Project Screenshots:** [Insert relevant screenshots]
+
+---
+
+## 14. Collaborators
+
+PERAVERSE was developed collaboratively by a team of nine members as part of the CO227 Computer Engineering Project.
+
+**Collaborators listed:**
+
+- Savindi S.H.T. Miss
+- Lakshika A. Senevirathne
+- Shashika Sathsarani
+- Chamodi Nethmini Dileka
+- Asindu Chandrasekara
+
+---
+
+### Skills Demonstrated
+
+React.js · Node.js · Express.js · PostgreSQL · REST API Development · UI/UX Design · Frontend Development · Backend Development · Full-Stack Development · Teamwork · GitHub · System Integration · Database Management
+
+---
+
+### Making Information Accessible Through Intelligent Software
+
+PERAVERSE demonstrates how modern web technologies and conversational interfaces can be combined to create a more interactive, accessible, and informative exhibition experience.
