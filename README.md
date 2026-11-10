@@ -1,15 +1,15 @@
-# Sandali Uthpala — Personal Portfolio
+# Sandali Uthpala - Personal Portfolio
 
 A responsive personal portfolio introducing **Sandali Uthpala**, a Computer
 Engineering undergraduate at the University of Peradeniya. The site brings
-together her background, technical skills, projects, experience, certificates,
+together my background, technical skills, projects, experience, certificates,
 and contact information in one place.
 
 ## Purpose
 
-This portfolio is a public introduction to Sandali's work and interests. It
+This portfolio is a public introduction to my work and interests. It
 helps visitors explore selected software, research, and engineering projects;
-learn about her skills and contributions; view supporting project media and
+learn about my skills and contributions; view supporting project media and
 PDF documents; and get in touch.
 
 ## What’s included
@@ -18,8 +18,7 @@ PDF documents; and get in touch.
 - **Projects:** A selection of software, research, robotics, and engineering
   work, with dedicated detail pages.
 - **Experience:** Roles and contributions presented as a timeline.
-- **Achievements:** Direct links to seven certificates and an ICPC service
-  letter in PDF format.
+- **Achievements:** Direct links to certificates and appriciations.
 - **Contact:** Email and social links.
 - **Responsive interface:** Layouts adapt to mobile and desktop screens, with
   a collapsible mobile navigation menu.
@@ -28,7 +27,7 @@ PDF documents; and get in touch.
 
 ### Featured projects
 
-- **RoadEye — Smart Riding Assistant:** A connected riding helmet concept for
+- **RoadEye - Smart Riding Assistant:** A connected riding helmet concept for
   navigation and rider alerts.
 - **PeraVerse Smart Info Kiosk:** A university information kiosk showcased at
   EngEX 2025.
@@ -36,7 +35,7 @@ PDF documents; and get in touch.
   motion artifacts in abdominal MRI.
 - **Progressive Cyber Defense:** Research into practical defense decisions for
   university networks.
-- **Human–Elephant Conflict Mitigation:** An eco-guard concept using acoustic
+- **Human-Elephant Conflict Mitigation:** An eco-guard concept using acoustic
   sensing and AI-assisted visual detection.
 - **Line Following Robot:** A sensor-based robotics mini project.
 - **Rock Paper Scissors Lizard Spock:** A five-choice game implementation.
