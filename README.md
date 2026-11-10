@@ -19,8 +19,8 @@ PDF documents; and get in touch.
   work, with dedicated detail pages.
 - **Experience:** Roles and contributions presented as a timeline.
 - **Achievements:** Direct links to certificates and appriciations.
-- **Contact:** Email, LinkedIn, GitHub, and Course Networking e-portfolio
-  links.
+- **Contact:** Email, LinkedIn, GitHub, HackerRank, and Course Networking
+  e-portfolio links.
 - **Responsive interface:** Layouts adapt to mobile and desktop screens, with
   a collapsible mobile navigation menu.
 - **Project media:** Illustrations, showcase images, organization logos, and
