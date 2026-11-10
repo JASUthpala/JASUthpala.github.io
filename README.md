@@ -10,6 +10,7 @@ A responsive personal portfolio for **Sandali Uthpala**, a Computer Engineering 
 - Individual detail pages for selected projects
 - Mobile navigation and an automatically updated copyright year
 - Project illustrations, showcase images, organization logos, and demonstration videos
+- Direct links to certificates and appreciation documents (PDF)
 - Ready to publish as a static website with GitHub Pages
 
 ## Projects
@@ -51,7 +52,9 @@ For a GitHub user site, name the repository `<your-username>.github.io`; its URL
 ├── projects/        # Individual project detail pages
 ├── images/          # Project illustrations and showcase images
 ├── videos/          # Project demonstration videos
-└── logos/           # Organization and experience logos
+├── logos/           # Organization and experience logos
+├── Certificates/    # Certificates
+└── Appreciations/   # Appreciation and service letters
 ```
 
 ## Updating the portfolio
