@@ -32,14 +32,17 @@ PDF documents; and get in touch.
   navigation and rider alerts.
 - **PeraVerse Smart Info Kiosk:** A university information kiosk showcased at
   EngEX 2025.
-- **MRI Motion Artifact Reduction:** Research into GAN-based reduction of
-  motion artifacts in abdominal MRI.
-- **Progressive Cyber Defense:** Research into practical defense decisions for
-  university networks.
 - **Human-Elephant Conflict Mitigation:** An eco-guard concept using acoustic
   sensing and AI-assisted visual detection.
 - **Line Following Robot:** A sensor-based robotics mini project.
 - **Rock Paper Scissors Lizard Spock:** A five-choice game implementation.
+
+### Research
+
+- **MRI Motion Artifact Reduction:** Research into GAN-based reduction of
+  motion artifacts in abdominal MRI.
+- **Progressive Cyber Defense:** Research into practical defense decisions for
+  university networks.
 
 Each project has a page in `projects/` with additional information.
 
