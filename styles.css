@@ -80,3 +80,9 @@
 .timeline-chip{display:inline-flex;margin:0 6px 4px 0;padding:3px 9px;border:1px solid rgba(103,232,249,.18);border-radius:999px;background:rgba(103,232,249,.06);color:#bceff5;font-size:.68rem;letter-spacing:.2px}
 @media(max-width:620px){.roadeye-timeline{gap:11px;padding-left:32px}.roadeye-timeline::before{left:10px}.roadeye-timeline-step::before{left:-32px;width:23px;height:23px;font-size:.56rem}.roadeye-timeline-step summary{grid-template-columns:minmax(0,1fr) 24px;gap:5px 10px;padding:13px}.roadeye-timeline-date{grid-column:1}.roadeye-timeline-title{grid-column:1;grid-row:2}.roadeye-timeline-toggle{grid-column:2;grid-row:1/3}}
 @media(prefers-reduced-motion:reduce){.roadeye-timeline-step details,.roadeye-timeline-step summary::before,.roadeye-timeline-toggle::before,.roadeye-timeline-toggle::after{transition:none}.roadeye-timeline-step details:hover{transform:none}}
+.achievement-title{margin:0 0 10px;font:600 1.08rem var(--display);color:var(--cyan)}
+.achievement-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.achievement-gallery figure{margin:0;overflow:hidden;background:var(--panel2);border:1px solid var(--line);border-radius:10px}
+.achievement-gallery img{display:block;width:100%;height:250px;padding:10px;object-fit:contain;background:#090e1b}
+.achievement-gallery figcaption{padding:10px 12px;color:var(--muted);font-size:.78rem}
+@media(max-width:620px){.achievement-gallery{grid-template-columns:1fr}}
