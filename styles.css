@@ -96,3 +96,26 @@
 .elephant-achievement-image img{display:block;width:100%;max-height:360px;object-fit:contain;border-radius:7px}
 .elephant-achievement-image figcaption{padding:9px 2px 0;color:var(--muted);font-size:.75rem}
 @media(max-width:620px){.elephant-achievement{grid-template-columns:1fr;gap:18px}}
+.solar-team-panel>p{margin-bottom:16px}
+.solar-team-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.solar-team-list li{min-width:0}
+.solar-team-list a{display:flex;align-items:center;justify-content:space-between;gap:10px;height:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;color:var(--text);font-weight:600}
+.solar-team-list a:hover{border-color:rgba(103,232,249,.4);color:var(--cyan)}
+.solar-team-list a span{color:var(--cyan);font-size:.72rem;white-space:nowrap}
+@media(max-width:620px){.solar-team-list{grid-template-columns:1fr}}
+.research-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:18px}
+.research-facts div{display:grid;align-content:start;gap:6px;min-height:84px;padding:14px;background:var(--panel2);border:1px solid var(--line);border-radius:9px}
+.research-facts span{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.8px}
+.research-facts strong{font:600 .88rem var(--display);overflow-wrap:anywhere}
+.research-architecture-image{margin-top:20px;max-height:760px}
+.research-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+.research-gallery img{height:auto;aspect-ratio:1.42;object-fit:contain;background:#f7f8fa}
+.research-results img{aspect-ratio:3/1}
+.research-table-wrap{overflow-x:auto;margin-top:18px;border:1px solid var(--line);border-radius:10px}
+.research-table{width:100%;border-collapse:collapse;text-align:left;font-size:.84rem}
+.research-table th,.research-table td{padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+.research-table thead{background:var(--panel2);color:var(--cyan)}
+.research-table tbody tr:last-child th,.research-table tbody tr:last-child td{border-bottom:0}
+.research-table tbody th{font-weight:600}
+@media(max-width:760px){.research-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.research-gallery{grid-template-columns:1fr}.research-gallery img{max-height:none}.research-architecture-image{max-height:560px}}

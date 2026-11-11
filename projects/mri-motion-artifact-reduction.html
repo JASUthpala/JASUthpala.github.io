@@ -33,56 +33,231 @@
             abdominal MRI while preserving meaningful structural details.
           </p>
           <div class="tag-list detail-tags">
-            <span>Python</span><span>GANs</span><span>PyTorch / DL</span>
-            <span>Medical Imaging</span>
+            <span>Python</span><span>GANs</span><span>TensorFlow</span>
+            <span>Keras</span><span>Medical Imaging</span>
           </div>
         </div>
         <img
           class="detail-media"
-          src="../images/mri-motion-cover.svg"
-          alt="Illustration of an MRI scanner and an abdominal scan"
+          src="../images/MRI%20Restoration%20Workflow.png"
+          alt="MRI restoration workflow for reducing motion artifacts with a GAN"
         />
         <section class="detail-panel">
           <h2>Research overview</h2>
           <p>
-            This research explores deep-learning methods for reducing rigid
-            motion artifacts in abdominal MRI. The aim is to investigate image
-            restoration while retaining anatomical structures relevant to
-            interpretation.
+            This research focuses on reducing rigid motion artifacts in
+            abdominal Magnetic Resonance Imaging (MRI) using Generative
+            Adversarial Networks (GANs). Breathing and patient movement can
+            introduce ghosting, blurring, and structural distortions that
+            affect medical image interpretation. The study investigates
+            reconstructing motion-free images from corrupted inputs, with
+            particular attention to generator loss combinations and weight
+            initialization strategies.
           </p>
         </section>
         <section class="detail-panel">
-          <h2>Research problem and objective</h2>
+          <h2>Research objectives</h2>
           <p>
-            Patient motion can introduce artifacts that affect the appearance
-            of MRI images. The research objective is to explore whether a
-            generative adversarial network can reduce these artifacts while
-            preserving the underlying structural details.
+            The study aims to develop a GAN-based framework for abdominal MRI
+            motion-artifact reduction, simulate motion corruption through
+            k-space manipulation, and compare the effect of generator loss
+            combinations and weight initialization on reconstruction quality.
+            Evaluation uses quantitative image-quality metrics and visual
+            comparisons.
           </p>
         </section>
         <section class="detail-panel">
-          <h2>Approach and evaluation</h2>
+          <h2>Methodology</h2>
           <p>
-            The project investigates GAN-based image processing using Python
-            and deep-learning tools. Dataset details, experimental protocol,
-            quantitative results, and clinical validation have not been
-            supplied for this portfolio page and should be added when confirmed.
+            The experiments use 5,000 abdominal MRI images from Duke Liver
+            Dataset v2. DICOM images were preprocessed, normalized, resized to
+            512 × 512 pixels, and split into 80% training and 20% testing.
+          </p>
+          <ul>
+            <li>
+              <strong>Motion simulation:</strong> Applied spatial shifts to
+              clean images and replaced selected k-space frequency bands to
+              create paired motion-corrupted and clean samples.
+            </li>
+            <li>
+              <strong>GAN model:</strong> Used a residual U-Net
+              encoder-decoder generator and a discriminator to distinguish
+              restored images from clean images.
+            </li>
+            <li>
+              <strong>Loss comparisons:</strong> Compared GAN + L1, GAN + L1 +
+              perceptual, GAN + L1 + SSIM, and GAN + L1 + perceptual + SSIM.
+            </li>
+            <li>
+              <strong>Evaluation:</strong> Compared MSE, PSNR, and SSIM,
+              training loss curves, and reconstructed MRI images.
+            </li>
+          </ul>
+        </section>
+        <section class="detail-panel">
+          <h2>Experimental setup</h2>
+          <div class="research-facts">
+            <div><span>Dataset</span><strong>Duke Liver Dataset v2</strong></div>
+            <div><span>Image set</span><strong>5,000 DICOM images</strong></div>
+            <div><span>Resolution</span><strong>512 × 512</strong></div>
+            <div><span>Framework</span><strong>TensorFlow / Keras</strong></div>
+            <div><span>Generator</span><strong>Residual U-Net</strong></div>
+            <div><span>Training</span><strong>50 epochs · batch size 2</strong></div>
+            <div><span>Hardware</span><strong>NVIDIA RTX A6000</strong></div>
+            <div><span>Metrics</span><strong>MSE · PSNR · SSIM</strong></div>
+          </div>
+        </section>
+        <section class="detail-panel">
+          <h2>GAN architecture</h2>
+          <p>
+            The generator estimates a residual artifact map from a
+            motion-corrupted image and subtracts it to produce a restored
+            image. The discriminator compares generated outputs with clean
+            MRI images during adversarial training.
+          </p>
+          <img
+            class="detail-media research-architecture-image"
+            src="../images/MRI%20Motion%20Artifact%20Reduction/GAN%20Architecture.png"
+            alt="GAN architecture for MRI motion artifact reduction, showing the residual U-Net generator and discriminator"
+            loading="lazy"
+          />
+        </section>
+        <section class="detail-panel">
+          <h2>Training loss curves for different GAN loss function combinations</h2>
+          <p>
+            Generator and discriminator loss across training epochs for each
+            loss configuration.
+          </p>
+          <div class="detail-gallery research-gallery">
+            <figure>
+              <img
+                src="../images/MRI%20Motion%20Artifact%20Reduction/gan_l1_loss_Model%20Result.png"
+                alt="Generator and discriminator training losses for GAN plus L1"
+                loading="lazy"
+              />
+              <figcaption>GAN + L1</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../images/MRI%20Motion%20Artifact%20Reduction/gan_l1_perceptual_loss_Model%20Result.png"
+                alt="Generator and discriminator training losses for GAN plus L1 and perceptual loss"
+                loading="lazy"
+              />
+              <figcaption>GAN + L1 + Perceptual</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../images/MRI%20Motion%20Artifact%20Reduction/gan_l1_ssim_loss_Model%20Result.png"
+                alt="Generator and discriminator training losses for GAN plus L1 and SSIM loss"
+                loading="lazy"
+              />
+              <figcaption>GAN + L1 + SSIM</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../images/MRI%20Motion%20Artifact%20Reduction/gan_l1_perceptual_ssim_loss_Model%20Result.png"
+                alt="Generator and discriminator training losses for GAN plus L1, perceptual, and SSIM losses"
+                loading="lazy"
+              />
+              <figcaption>GAN + L1 + Perceptual + SSIM</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="detail-panel">
+          <h2>Results</h2>
+          <p>
+            The reported quantitative results show different trade-offs between
+            pixel-level error, signal fidelity, and structural similarity
+            across the generator loss configurations.
+          </p>
+          <div class="research-table-wrap">
+            <table class="research-table">
+              <thead>
+                <tr>
+                  <th scope="col">Model configuration</th>
+                  <th scope="col">MSE</th>
+                  <th scope="col">PSNR (dB)</th>
+                  <th scope="col">SSIM</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">GAN + L1</th><td>0.00911</td><td>31.94</td><td>0.89130</td></tr>
+                <tr><th scope="row">GAN + L1 + Perceptual</th><td>0.00937</td><td>30.99</td><td>0.89629</td></tr>
+                <tr><th scope="row">GAN + L1 + SSIM</th><td>1.67440</td><td>11.97</td><td>0.89022</td></tr>
+                <tr><th scope="row">GAN + L1 + Perceptual + SSIM</th><td>0.00979</td><td>31.09</td><td>0.89474</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul>
+            <li>GAN + L1 achieved the lowest reported MSE and highest PSNR.</li>
+            <li>GAN + L1 + Perceptual achieved the highest reported SSIM.</li>
+            <li>
+              Adding SSIM loss or combining more loss terms did not consistently
+              improve all reported metrics.
+            </li>
+          </ul>
+          <div class="detail-gallery research-gallery research-results">
+            <figure>
+              <img
+                src="../images/MRI%20Motion%20Artifact%20Reduction/result_gan_l1.png"
+                alt="Motion-corrupted MRI, clean ground truth, and GAN plus L1 prediction"
+                loading="lazy"
+              />
+              <figcaption>GAN + L1</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../images/MRI%20Motion%20Artifact%20Reduction/result_gan_l1_perceptual.jpeg"
+                alt="Motion-corrupted MRI, clean ground truth, and GAN plus L1 and perceptual prediction"
+                loading="lazy"
+              />
+              <figcaption>GAN + L1 + Perceptual</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../images/MRI%20Motion%20Artifact%20Reduction/result_gan_l1_ssim.png"
+                alt="Motion-corrupted MRI, clean ground truth, and GAN plus L1 and SSIM prediction"
+                loading="lazy"
+              />
+              <figcaption>GAN + L1 + SSIM</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../images/MRI%20Motion%20Artifact%20Reduction/result_gan_l1_perceptual_ssim.png"
+                alt="Motion-corrupted MRI, clean ground truth, and GAN plus L1, perceptual, and SSIM prediction"
+                loading="lazy"
+              />
+              <figcaption>GAN + L1 + Perceptual + SSIM</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="detail-panel">
+          <h2>Limitations and future work</h2>
+          <p>
+            The evaluation uses synthetically generated motion artifacts,
+            focuses on translational motion, and does not include clinical
+            validation by radiologists. Future work could model respiratory
+            and non-rigid motion, evaluate real motion-corrupted clinical MRI,
+            study loss weighting, and include expert review.
           </p>
         </section>
         <section class="detail-panel">
-          <h2>Next steps</h2>
+          <h2>My contributions</h2>
           <p>
-            Future documentation can describe the selected datasets, model
-            design, evaluation measures, and observed limitations, while
-            distinguishing research results from any clinical use or claims.
+            As a student researcher, I contributed to MRI dataset preprocessing,
+            synthetic k-space motion artifact generation, GAN implementation
+            and training, comparison of generator loss configurations, and
+            evaluation using MSE, PSNR, and SSIM. I also analyzed model
+            convergence and visual reconstructions and contributed to research
+            documentation.
           </p>
         </section>
         <div class="detail-footer">
           <a
-            href="https://github.com/search?q=MRI%20Motion%20Artifact%20Reduction&type=repositories"
+            href="https://github.com/JASUthpala/Motion-Artifact-Reduction-in-Abdominal-MRIs"
             target="_blank"
             rel="noreferrer"
-            >Find on GitHub ↗</a
+            >GitHub repository ↗</a
           >
           <a href="../index.html#research">All research →</a>
         </div>
