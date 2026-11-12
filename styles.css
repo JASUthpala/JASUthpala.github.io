@@ -114,6 +114,13 @@
 .achievement-gallery img{display:block;width:100%;height:250px;padding:10px;object-fit:contain;background:#090e1b}
 .achievement-gallery figcaption{padding:10px 12px;color:var(--muted);font-size:.78rem}
 @media(max-width:620px){.achievement-gallery{grid-template-columns:1fr}}
+.volunteer-card{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.volunteer-copy{display:flex;align-items:flex-start;gap:18px}
+.volunteer-copy h4{margin:0 0 7px;font:600 1.05rem var(--display)}
+.volunteer-copy p{max-width:900px;margin:0;color:var(--muted);font-size:.88rem}
+.volunteer-gallery{margin-top:20px}
+.volunteer-gallery img{height:320px;padding:0;object-fit:cover}
+@media(max-width:620px){.volunteer-card{padding:16px}.volunteer-copy{gap:12px}.volunteer-gallery img{height:auto;max-height:480px;padding:8px;object-fit:contain}}
 .elephant-achievement{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(210px,.65fr);align-items:center;gap:28px;background:linear-gradient(125deg,rgba(103,232,249,.09),rgba(167,139,250,.07) 58%,var(--panel))}
 .elephant-achievement .eyebrow{margin-bottom:8px}
 .elephant-achievement h2{margin-bottom:14px}
