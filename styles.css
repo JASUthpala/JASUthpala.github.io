@@ -28,6 +28,7 @@
 .role-connection{display:inline-flex;align-items:center;gap:6px;margin-top:5px;color:var(--cyan);font-size:.76rem;font-weight:600}
 .role-connection:hover{text-decoration:underline}
 .project-detail{min-height:calc(100vh - 76px);padding:70px 0 100px}
+body{overflow-x:clip}
 .hero-intro{grid-column:1/-1;position:relative;padding-bottom:calc(clamp(.93rem,1.87vw,1.7rem) + 12px)}
 .hero-name{white-space:nowrap;margin-bottom:0}
 .hero-tagline{padding-top:clamp(1.87rem,3.73vw,3.4rem);font:700 clamp(2.9rem,5.75vw,5.15rem)/1.08 var(--display);letter-spacing:-4px;margin:0 0 24px}
