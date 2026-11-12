@@ -118,6 +118,7 @@
 @media(max-width:620px){.achievement-gallery{grid-template-columns:1fr}}
 .volunteer-card{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
 .volunteer-copy{display:flex;align-items:flex-start;gap:18px}
+.volunteer-logo{object-fit:contain;background:#1c1c1c;padding:4px}
 .volunteer-copy h4{margin:0 0 7px;font:600 1.05rem var(--display)}
 .volunteer-copy p{max-width:900px;margin:0;color:var(--muted);font-size:.88rem}
 .volunteer-project-link{color:var(--cyan);font-weight:600}
