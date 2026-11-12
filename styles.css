@@ -28,9 +28,9 @@
 .role-connection{display:inline-flex;align-items:center;gap:6px;margin-top:5px;color:var(--cyan);font-size:.76rem;font-weight:600}
 .role-connection:hover{text-decoration:underline}
 .project-detail{min-height:calc(100vh - 76px);padding:70px 0 100px}
-.hero-intro{grid-column:1/-1;position:relative}
+.hero-intro{grid-column:1/-1;position:relative;padding-bottom:calc(clamp(.93rem,1.87vw,1.7rem) + 12px)}
 .hero-name{white-space:nowrap;margin-bottom:0}
-.hero-tagline{padding-top:clamp(2.8rem,5.6vw,5.1rem);font:700 clamp(2.9rem,5.75vw,5.15rem)/1.08 var(--display);letter-spacing:-4px;margin:0 0 24px}
+.hero-tagline{padding-top:clamp(1.87rem,3.73vw,3.4rem);font:700 clamp(2.9rem,5.75vw,5.15rem)/1.08 var(--display);letter-spacing:-4px;margin:0 0 24px}
 .hero-copy{align-self:start}
 .quick-stats{position:absolute;top:clamp(90px,7.5vw,102px);right:0;z-index:4;width:205px;padding:15px;background:rgba(22,35,58,.92);border:1px solid var(--line);border-radius:13px;box-shadow:0 16px 40px #0005;backdrop-filter:blur(12px);animation:quick-stat-float 5s ease-in-out infinite}
 .quick-stats h2{margin:0 0 12px;color:var(--text);font:600 .78rem var(--display);letter-spacing:.1px}
@@ -49,8 +49,8 @@
 .skill-item>i,.skill-item-icon{width:20px;flex:0 0 20px;text-align:center}
 .skill-item>i{font-size:1.15rem}
 .skill-item-icon{font-size:1rem;line-height:1}
-@media(max-width:620px){.hero-name{white-space:normal}.hero-tagline{font-size:clamp(2.7rem,12.5vw,4rem);letter-spacing:-2.8px;padding-top:2.7rem}}
-@media(min-width:851px){.hero-card-wrap{transform:translateY(12px)}}
+@media(max-width:620px){.hero-intro{padding-bottom:.9rem}.hero-name{white-space:normal}.hero-tagline{font-size:clamp(2.7rem,12.5vw,4rem);letter-spacing:-2.8px;padding-top:1.8rem}}
+@media(min-width:851px){.hero-card-wrap{transform:translateY(12px)}.profile-card{top:-9.65rem;left:14px}}
 @media(max-width:800px){.quick-stats{position:relative;top:auto;right:auto;width:min(100%,420px);margin:24px 0 8px;animation:none}}
 @media(max-width:620px){.quick-stats{width:100%;padding:13px}.quick-stat-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick-stat{grid-template-columns:1fr;gap:2px}.quick-stat span{font-size:.62rem}}
 @media(prefers-reduced-motion:reduce){.quick-stats{animation:none}}
