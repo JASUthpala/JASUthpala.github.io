@@ -17,6 +17,12 @@
 .project-image-visual .visual-kicker{position:absolute;left:18px;top:18px;padding:5px 8px;border-radius:4px;background:#0b1020b8}
 .project-links{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .project-links a:last-child{text-align:right}
+
+.scroll-cue{display:inline-flex;align-items:center;gap:12px;padding:10px 15px;border:1px solid rgba(103,232,249,.45);border-radius:999px;background:rgba(103,232,249,.12);box-shadow:0 0 24px rgba(103,232,249,.12);color:var(--text);font-size:.72rem;font-weight:700;letter-spacing:1.6px;transition:background .2s,border-color .2s,box-shadow .2s}
+.scroll-cue:hover{background:rgba(103,232,249,.2);border-color:var(--cyan);box-shadow:0 0 28px rgba(103,232,249,.22)}
+.scroll-cue span{display:grid;place-items:center;width:25px;height:25px;margin-left:0;border-radius:50%;background:var(--cyan);color:var(--bg);font-size:1.1rem;line-height:1;animation:scroll-cue-bounce 1.2s ease-in-out infinite}
+@keyframes scroll-cue-bounce{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
+@media(prefers-reduced-motion:reduce){.scroll-cue span{animation:none}}
 .project-links-single{justify-content:flex-end}
 .visual-robot{background:linear-gradient(135deg,#163d48,#17213c 75%)}
 .robot-art{position:absolute;left:34%;top:24px;color:#7ce9f3;font-size:8rem;transform:rotate(-25deg)}
