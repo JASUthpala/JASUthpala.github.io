@@ -60,9 +60,7 @@ updateActiveSection();
 
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const revealTargets = [
-    ...document.querySelectorAll(
-      "#about .section-heading, #about .about-grid, #experience .section-heading, #experience .timeline, #volunteer-experience .section-heading, #volunteer-experience .volunteer-group, #contact .contact-inner",
-    ),
+    ...document.querySelectorAll("main > section:not(#home)"),
   ];
   let lastRevealScrollY = window.scrollY;
   let isScrollingDown = false;
@@ -97,7 +95,7 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             ],
             {
               duration: 700,
-              delay: target.matches(".section-heading") ? 0 : 100,
+              delay: 100,
               easing: "cubic-bezier(0.22, 1, 0.36, 1)",
               fill: "both",
             },
