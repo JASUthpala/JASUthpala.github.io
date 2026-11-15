@@ -58,4 +58,56 @@ window.addEventListener("scroll", scheduleActiveSectionUpdate, { passive: true }
 window.addEventListener("resize", scheduleActiveSectionUpdate);
 updateActiveSection();
 
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const revealTargets = [
+    ...document.querySelectorAll(
+      "#about .section-heading, #about .about-grid, #experience .section-heading, #experience .timeline, #volunteer-experience .section-heading, #volunteer-experience .volunteer-group, #contact .contact-inner",
+    ),
+  ];
+  let lastRevealScrollY = window.scrollY;
+  let isScrollingDown = false;
+  let revealUpdateScheduled = false;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      const currentScrollY = window.scrollY;
+      isScrollingDown = currentScrollY > lastRevealScrollY;
+      lastRevealScrollY = currentScrollY;
+      if (!isScrollingDown || revealUpdateScheduled) return;
+
+      revealUpdateScheduled = true;
+      window.requestAnimationFrame(() => {
+        if (!isScrollingDown) {
+          revealUpdateScheduled = false;
+          return;
+        }
+
+        revealTargets.forEach((target) => {
+          if (target.dataset.scrollRevealed) return;
+
+          const bounds = target.getBoundingClientRect();
+          if (bounds.top >= window.innerHeight || bounds.bottom <= 0) return;
+
+          target.dataset.scrollRevealed = "true";
+          target.animate(
+            [
+              { opacity: 0, transform: "translateY(32px)" },
+              { opacity: 1, transform: "translateY(0)" },
+            ],
+            {
+              duration: 700,
+              delay: target.matches(".section-heading") ? 0 : 100,
+              easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+              fill: "both",
+            },
+          );
+        });
+        revealUpdateScheduled = false;
+      });
+    },
+    { passive: true },
+  );
+}
+
 document.getElementById("year").textContent = new Date().getFullYear();
