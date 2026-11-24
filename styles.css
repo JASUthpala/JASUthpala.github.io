@@ -95,11 +95,11 @@ body{overflow-x:clip}
 .industrial-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
 .industrial-gallery img{height:190px}
 .conference-subsection{margin-top:48px}
-.conference-meta,.conference-location{color:var(--cyan)!important}
+.conference-meta,.conference-location{color:#fff!important}
 .industrial-visit-copy h4{font:600 1.05rem var(--display);margin:24px 0 8px}
 .industrial-visit-copy ul{color:var(--muted);padding-left:20px}
 .conference-gallery{margin-top:0}
-.conference-tags{margin:20px 0 0;color:var(--cyan);font-size:.82rem;font-weight:700}
+.conference-tags{margin:20px 0 0;color:#fff;font-size:.82rem;font-weight:700}
 @media(max-width:620px){.projects-showcase,.detail-gallery{grid-template-columns:1fr}.project-links{align-items:flex-start}.project-links a{font-size:.74rem}.experience-logo{width:46px;height:46px}.timeline-body{gap:10px}.detail-container{width:min(100% - 34px,900px)}.project-detail{padding-top:45px}.detail-panel,.industrial-visit{padding:20px}.detail-footer{flex-direction:column}.detail-gallery img{height:auto;max-height:300px;object-fit:contain}}
 .timeline-intro{margin:0 0 25px!important;max-width:680px;color:var(--muted);font-size:.95rem}
 .roadeye-timeline{position:relative;display:grid;gap:14px;list-style:none;padding:0 0 0 38px;margin:0 0 24px;counter-reset:roadeye-step}
