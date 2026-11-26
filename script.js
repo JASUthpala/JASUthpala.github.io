@@ -112,7 +112,7 @@ document.querySelectorAll(".gallery-carousel").forEach((carousel) => {
       }
 
       moveGalleryForward();
-    }, 1000);
+    }, 2000);
   };
 
   const visibilityObserver = new IntersectionObserver(
