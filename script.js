@@ -23,7 +23,6 @@ const linkedSections = sectionLinks
 document.querySelectorAll(".gallery-carousel").forEach((carousel) => {
   const gallery = carousel.querySelector(".industrial-gallery");
   const slides = [...gallery.querySelectorAll("figure")];
-  const previousButton = carousel.querySelector("[data-gallery-prev]");
   const nextButton = carousel.querySelector("[data-gallery-next]");
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
@@ -35,32 +34,58 @@ document.querySelectorAll(".gallery-carousel").forEach((carousel) => {
     slide.setAttribute("aria-label", `${index + 1} of ${slides.length}`);
   });
 
-  const moveGallery = (direction) => {
+  slides.forEach((slide) => {
+    const clone = slide.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    clone.removeAttribute("role");
+    clone.removeAttribute("aria-roledescription");
+    clone.removeAttribute("aria-label");
+    gallery.append(clone);
+  });
+
+  const getCycleWidth = () => {
     const slideWidth = slides[0].getBoundingClientRect().width;
     const gap = parseFloat(getComputedStyle(gallery).columnGap);
-    const maxScroll = gallery.scrollWidth - gallery.clientWidth;
-    const isAtStart = gallery.scrollLeft <= 1;
-    const isAtEnd = gallery.scrollLeft >= maxScroll - 1;
-    const nextPosition =
-      direction > 0
-        ? isAtEnd
-          ? 0
-          : Math.min(gallery.scrollLeft + slideWidth + gap, maxScroll)
-        : isAtStart
-          ? maxScroll
-          : Math.max(gallery.scrollLeft - slideWidth - gap, 0);
+    return slides.length * (slideWidth + gap);
+  };
+
+  const resetLoopPosition = () => {
+    const cycleWidth = getCycleWidth();
+    if (gallery.scrollLeft < cycleWidth - 1) return;
+
+    gallery.scrollTo({
+      left: gallery.scrollLeft - cycleWidth,
+      behavior: "instant",
+    });
+  };
+
+  let loopResetTimer;
+  gallery.addEventListener("scrollend", resetLoopPosition);
+  gallery.addEventListener(
+    "scroll",
+    () => {
+      window.clearTimeout(loopResetTimer);
+      loopResetTimer = window.setTimeout(resetLoopPosition, 350);
+    },
+    { passive: true },
+  );
+
+  const moveGalleryForward = () => {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(gallery).columnGap);
     const behavior = prefersReducedMotion.matches
       ? "auto"
       : "smooth";
 
-    gallery.scrollTo({ left: nextPosition, behavior });
+    gallery.scrollTo({
+      left: gallery.scrollLeft + slideWidth + gap,
+      behavior,
+    });
   };
 
-  previousButton.addEventListener("click", () => moveGallery(-1));
-  nextButton.addEventListener("click", () => moveGallery(1));
+  nextButton.addEventListener("click", moveGalleryForward);
 
-  let isHovered = false;
-  let hasFocus = false;
+  let isVisible = false;
   let autoplayTimer;
 
   const stopAutoplay = () => {
@@ -69,29 +94,39 @@ document.querySelectorAll(".gallery-carousel").forEach((carousel) => {
   };
 
   const startAutoplay = () => {
-    if (prefersReducedMotion.matches || isHovered || hasFocus || autoplayTimer) {
+    if (
+      !isVisible ||
+      prefersReducedMotion.matches ||
+      autoplayTimer
+    ) {
       return;
     }
 
-    autoplayTimer = window.setInterval(() => moveGallery(1), 5000);
+    autoplayTimer = window.setInterval(() => {
+      if (
+        !isVisible ||
+        prefersReducedMotion.matches
+      ) {
+        stopAutoplay();
+        return;
+      }
+
+      moveGalleryForward();
+    }, 1000);
   };
 
-  carousel.addEventListener("mouseenter", () => {
-    isHovered = true;
-    stopAutoplay();
-  });
-  carousel.addEventListener("mouseleave", () => {
-    isHovered = false;
-    startAutoplay();
-  });
-  carousel.addEventListener("focusin", () => {
-    hasFocus = true;
-    stopAutoplay();
-  });
-  carousel.addEventListener("focusout", (event) => {
-    hasFocus = carousel.contains(event.relatedTarget);
-    startAutoplay();
-  });
+  const visibilityObserver = new IntersectionObserver(
+    ([entry]) => {
+      isVisible = entry.isIntersecting && entry.intersectionRatio >= 0.15;
+      if (isVisible) {
+        startAutoplay();
+      } else {
+        stopAutoplay();
+      }
+    },
+    { threshold: 0.15 },
+  );
+
   prefersReducedMotion.addEventListener("change", () => {
     if (prefersReducedMotion.matches) {
       stopAutoplay();
@@ -99,7 +134,7 @@ document.querySelectorAll(".gallery-carousel").forEach((carousel) => {
       startAutoplay();
     }
   });
-  startAutoplay();
+  visibilityObserver.observe(carousel);
 });
 
 let scrollUpdateScheduled = false;

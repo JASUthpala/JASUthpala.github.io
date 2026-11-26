@@ -98,7 +98,7 @@ body{overflow-x:clip}
 .industrial-gallery::-webkit-scrollbar{display:none}
 .industrial-gallery figure{flex:0 0 calc((100% - 28px)/3);scroll-snap-align:start}
 .industrial-gallery img{height:190px}
-.gallery-controls{position:absolute;inset:50% 12px auto;z-index:2;display:flex;justify-content:space-between;transform:translateY(-50%);pointer-events:none}
+.gallery-controls{position:absolute;inset:50% 12px auto;z-index:2;display:flex;justify-content:flex-end;transform:translateY(-50%);pointer-events:none}
 .gallery-controls button{display:grid;width:44px;height:44px;place-items:center;padding:0;border:1px solid rgba(103,232,249,.42);border-radius:50%;background:rgba(11,16,32,.62);backdrop-filter:blur(8px);color:var(--cyan);font:600 1.6rem/1 var(--font);cursor:pointer;pointer-events:auto;transition:background .2s,border-color .2s}
 .gallery-controls button:hover{border-color:var(--cyan);background:rgba(103,232,249,.2)}
 .gallery-controls button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
