@@ -19,6 +19,42 @@ const sectionLinks = [...navLinks.querySelectorAll('a[href^="#"]')];
 const linkedSections = sectionLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
+
+document.querySelectorAll(".gallery-carousel").forEach((carousel) => {
+  const gallery = carousel.querySelector(".industrial-gallery");
+  const slides = [...gallery.querySelectorAll("figure")];
+  const previousButton = carousel.querySelector("[data-gallery-prev]");
+  const nextButton = carousel.querySelector("[data-gallery-next]");
+
+  slides.forEach((slide, index) => {
+    slide.setAttribute("role", "group");
+    slide.setAttribute("aria-roledescription", "slide");
+    slide.setAttribute("aria-label", `${index + 1} of ${slides.length}`);
+  });
+
+  const updateControls = () => {
+    previousButton.disabled = gallery.scrollLeft <= 1;
+    nextButton.disabled =
+      gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 1;
+  };
+
+  const scrollBySlide = (direction) => {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(gallery).columnGap);
+    const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? "auto"
+      : "smooth";
+
+    gallery.scrollBy({ left: direction * (slideWidth + gap), behavior });
+  };
+
+  previousButton.addEventListener("click", () => scrollBySlide(-1));
+  nextButton.addEventListener("click", () => scrollBySlide(1));
+  gallery.addEventListener("scroll", updateControls, { passive: true });
+  window.addEventListener("resize", updateControls);
+  updateControls();
+});
+
 let scrollUpdateScheduled = false;
 
 const updateActiveSection = () => {
